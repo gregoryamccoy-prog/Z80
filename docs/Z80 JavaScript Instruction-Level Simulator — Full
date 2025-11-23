@@ -1,0 +1,376 @@
+Z80 JavaScript Instruction-Level Simulator — Full Project Specification
+1. Project Overview
+
+This project implements a Z80 microprocessor simulator in JavaScript running inside a web browser. The CPU is emulated at the instruction, register, and bus level. It is not a gate-level simulation. The simulator must:
+
+Execute the full documented Zilog Z80 instruction set (unprefixed, CB, ED, DD, FD).
+
+Model registers, flags, memory, program counter, stack pointer, and index registers.
+
+Simulate instruction fetch, decode, execute cycles.
+
+Visually display all registers and flags.
+
+Show activity on the address bus and data bus.
+
+Load program memory from a user-supplied text file containing address–byte mappings.
+
+Allow the user to run, pause, single-step, and change CPU speed.
+
+Let the user inspect memory when paused.
+
+The final product runs entirely in the browser using HTML, CSS, and JavaScript modules.
+
+2. Project Structure
+
+The coding agent must create the following files:
+index.html
+styles.css
+main.js
+cpu.js
+memory.js
+ui.js
+opcodes_unprefixed.js
+opcodes_cb.js
+opcodes_ed.js
+opcodes_ddfd.js
+
+
+File Responsibilities
+
+index.html
+Main UI layout. Panels for registers, flags, buses, memory, controls, and file input.
+
+styles.css
+A readable layout using flexbox or CSS grid. Monospace fonts for hex and binary. Simple “LED-style” bit indicators for bus/flags.
+
+main.js
+Entry point. Hooks up CPU, memory, UI, main loop, clock speed handling, and file input.
+
+cpu.js
+Implements the CPU class, registers, flag logic, fetch/decode/execute cycle, prefix dispatching, and bus-monitor values.
+
+memory.js
+Holds a Uint8Array(65536) plus read/write helpers and the memory-map loader.
+
+ui.js
+Renders register values, flags, memory, buses, and status indicators.
+
+opcode tables (opcodes_*.js)
+Data-driven instruction table modules, each exporting a table with handlers for the instructions in that prefix category.
+
+3. CPU Architecture Requirements
+3.1 Registers
+
+The CPU class must include:
+
+8-bit registers: A, F, B, C, D, E, H, L
+
+Alternate set: A’, F’, B’, C’, D’, E’, H’, L’
+
+16-bit registers (derived): AF, BC, DE, HL via getters/setters
+
+Index registers: IX, IY
+
+Special registers: PC, SP, I, R
+
+Internal: halted, interruptsEnabled, tStates
+
+Bus monitor values: currentAddressBus, currentDataBus
+
+Register pairs must be implemented as getters and setters. Example:
+get bc() { return (this.b << 8) | this.c; }
+set bc(v) { this.b = (v >> 8) & 0xFF; this.c = v & 0xFF; }
+
+
+3.2 Flags
+
+Flag bits in F register:
+
+Flag	Bit	Meaning
+S	7	Sign
+Z	6	Zero
+H	4	Half-Carry
+P/V	2	Parity / Overflow
+N	1	Subtract
+C	0	Carry
+
+getFlag(mask) { … }
+setFlag(mask, value) { … }
+
+Constants:
+FLAG_S = 0x80
+FLAG_Z = 0x40
+FLAG_H = 0x10
+FLAG_PV = 0x04
+FLAG_N = 0x02
+FLAG_C = 0x01
+
+3.3 Memory Model
+
+Memory is a simple flat 64K space:
+3.3 Memory Model
+new Uint8Array(65536)
+
+
+Memory Helper Functions
+readByte(memory, address)
+writeByte(memory, address, value)
+
+3.4 CPU Execution
+
+The CPU operates on instruction boundaries, not clock cycles.
+
+Workflow:
+
+Fetch opcode at PC
+
+Decode opcode via unprefixed table
+
+If prefix (0xCB, 0xED, 0xDD, 0xFD), dispatch to secondary table
+
+Execute handler
+
+Update registers and flags
+
+Update bus values
+
+Example opcode fetch:
+const addr = cpu.pc & 0xFFFF;
+const opcode = readByte(cpu.memory, addr);
+cpu.currentAddressBus = addr;
+cpu.currentDataBus = opcode;
+cpu.pc = (cpu.pc + 1) & 0xFFFF;
+return opcode;
+
+4. Opcode Table System
+
+Each opcode table is an array of 256 entries.
+
+Entry Format
+
+{
+  mnemonic: "LD A,n",
+  bytes: 2,
+  cycles: 7,
+  execute(cpu) {
+    // perform the instruction
+  }
+}
+
+Prefix Handling
+
+Unprefixed table’s handler for prefix opcodes must:
+
+Read the next byte
+
+Dispatch to e.g. CB_TABLE[nextByte]
+
+5. UI Requirements
+
+The UI must be simple, legible, and include:
+
+5.1 Register Panel
+
+Show A, F, B, C, D, E, H, L, AF, BC, DE, HL, IX, IY, SP, PC in both hex and binary.
+
+5.2 Flags Panel
+
+Display each flag individually with an indicator showing 0/1.
+
+5.3 Bus Panel
+
+Address bus: show 16-bit binary + hex
+
+Data bus: show 8-bit binary + hex
+
+Values taken from cpu.currentAddressBus and cpu.currentDataBus
+
+5.4 Memory Viewer
+
+Read-only hex viewer
+
+Scrollable
+Active address highlight optional
+
+Memory must freeze when simulation is paused
+
+5.5 Controls
+
+Keyboard controls:
+
+Key	Action
+Space	Run/pause
+S	Single-step
++	Increase CPU speed
+-	Decrease CPU speed
+File input	Load memory map text file
+
+6. Simulation Loop
+
+Implemented in main.js.
+
+Two options:
+
+Option A — setInterval
+
+Run at adjustable ms interval, perform N CPU steps per tick.
+
+Option B — requestAnimationFrame
+
+Runs every frame, CPU speed determined by number of steps per frame.
+
+In either case:
+if running:
+    for i in range(stepsPerFrame):
+        cpu.step()
+ui.render(cpu, memory)
+
+
+7. Memory Map Loader
+
+Implement in memory.js.
+
+File Format
+
+Each line:
+<decimal_address> <hex_byte>
+
+0 3E
+1 00
+2 3C
+3 18
+4 FE
+5 76
+
+Loader Logic
+
+Skip blank lines.
+
+Skip malformed lines.
+
+Address = decimal 0–65535.
+
+Byte = 2-digit hex.
+
+Overwrite memory[address] = byte.
+
+Hook in HTML
+
+index.html must contain:
+
+<input type="file" id="memoryFileInput">
+
+main.js must handle:
+reader.onload = () => {
+  loadMemoryMapFromText(memory, reader.result);
+  cpu.reset();
+  cpu.pc = 0;
+};
+
+8. Implementation Order (For the Coding Agent)
+
+Create scaffolding for all files.
+
+Implement memory.js with read/write and loader.
+
+Implement CPU class (registers, flags, fetch/execute).
+
+Implement minimal/unprefixed opcodes (NOP, LD variants, INC/DEC, ALU ops, JP, JR, CALL, RET, PUSH, POP).
+
+Implement CB table (bit operations).
+
+Implement ED table (block ops, I/O ops).
+
+Implement DD/FD tables (IX/IY variants).
+
+Build UI layout and DOM references.
+
+Implement register, flag, and bus rendering.
+
+Implement memory viewer.
+
+Implement keyboard controls.
+
+Implement clock-speed system and main loop.
+
+Test using sample ROM provided below.
+
+Complete full Z80 documented instruction set.
+
+9. Instruction Metadata Schema (Optional for Mass Generation)
+
+Use this schema to generate handlers:
+{
+  opcode: 0x3E,
+  prefix: null,
+  mnemonic: "LD A,n",
+  length: 2,
+  cycles: [7],
+  behavior: "A = n; flags unchanged",
+  flags: {
+    S: "unchanged",
+    Z: "unchanged",
+    H: "reset",
+    P: "parity(result)",
+    N: "reset",
+    C: "unchanged"
+  }
+}
+
+
+10. Sample ROM
+
+This ROM increments A forever. It is ideal for first-run testing.
+
+Assembly
+
+        ORG 0x0000
+        LD A,0x00      ; 3E 00
+LOOP:   INC A          ; 3C
+        JR LOOP        ; 18 FE
+        HALT           ; 76
+
+
+Machine Code
+Address	Byte
+00000	3E
+00001	00
+00002	3C
+00003	18
+00004	FE
+00005	76
+
+Text File (for your simulator)
+0 3E
+1 00
+2 3C
+3 18
+4 FE
+5 76
+
+When run:
+
+PC cycles 0 → 1 → 2 → 3 → 4 → 2 → …
+
+A increments endlessly 00 → 01 → 02 → … → FF → 00 → …
+
+1. Acceptance Criteria
+
+The simulator is considered correct when:
+
+The sample ROM executes as expected.
+
+Registers and flags update correctly.
+
+Address and data bus values match the actual accesses.
+
+Memory loads properly from text file.
+
+The full documented Z80 instruction set is implemented.
+
+Execution speed is adjustable and stable.
+
+UI correctly reflects CPU state on each update.
+
+Memory viewer is accurate when paused.

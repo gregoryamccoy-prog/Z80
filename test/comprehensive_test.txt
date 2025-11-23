@@ -1,0 +1,52 @@
+; Comprehensive Test - Tests all new Phase 1 extended features
+; Combines: 16-bit loads, JP, CALL, RET, PUSH, POP, logical ops
+
+0000: 31 00 F0    ; LD SP,0xF000    - Initialize stack pointer
+0003: 01 34 12    ; LD BC,0x1234    - Load BC with 0x1234
+0006: 11 78 56    ; LD DE,0x5678    - Load DE with 0x5678
+0009: 21 BC 9A    ; LD HL,0x9ABC    - Load HL with 0x9ABC
+
+; Test PUSH/POP
+000C: C5          ; PUSH BC         - Push BC onto stack
+000D: D5          ; PUSH DE         - Push DE onto stack
+000E: E5          ; PUSH HL         - Push HL onto stack
+000F: C1          ; POP BC          - BC = 0x9ABC (from HL)
+0010: D1          ; POP DE          - DE = 0x5678 (from DE)
+0011: E1          ; POP HL          - HL = 0x1234 (from BC)
+
+; Now: BC=9ABC, DE=5678, HL=1234
+
+; Test logical operations
+0012: 3E 5A       ; LD A,0x5A       - Load A with 01011010
+0014: 06 3C       ; LD B,0x3C       - Load B with 00111100 (BC becomes 0x3CBC)
+0016: A0          ; AND B           - A = 5A & 3C = 18
+0017: FE 18       ; CP 0x18         - Compare with 24 (equal)
+0019: C2 50 00    ; JP NZ,0x0050    - Jump to error if not equal
+
+; Test subroutine call
+001C: CD 30 00    ; CALL 0x0030     - Call test subroutine
+001F: FE 30       ; CP 0x30         - Check return value
+0021: CA 25 00    ; JP Z,0x0025     - Continue if correct
+0024: 76          ; HALT            - Error if wrong
+
+0025: 3E 42       ; LD A,0x42       - Load success value
+0027: 76          ; HALT            - Success!
+
+; Error handlers
+0050: 3E FF       ; LD A,0xFF       - Load error code
+0052: 76          ; HALT            - Error halt
+
+; Subroutine at 0x0030
+0030: 3E 10       ; LD A,0x10       - Load 16
+0032: 87          ; ADD A,A         - A = 20
+0033: 87          ; ADD A,A         - A = 40
+0034: D6 10       ; SUB 0x10        - A = 30
+0036: C9          ; RET             - Return with A=30
+
+; Expected final state if successful:
+; A = 0x42 (success value)
+; BC = 0x3CBC (B was overwritten by LD B,0x3C at 0x0014)
+; DE = 0x5678
+; HL = 0x1234
+; SP = 0xF000 (restored after balanced stack ops)
+; PC = after HALT at 0x0027

@@ -1,0 +1,17 @@
+; Simple Memory Test - Basic test of memory operations
+; Just test the most basic memory operations to isolate the issue
+
+0000: 21 50 00    ; LD HL,0x0050    - Point HL to data area
+0003: 3E AA       ; LD A,0xAA       - Load test value
+0005: 77          ; LD (HL),A       - Store A at (HL) -> [0x0050] = 0xAA
+0006: 3E 00       ; LD A,0x00       - Clear A
+0008: 7E          ; LD A,(HL)       - A = [0x0050] should be 0xAA
+0009: FE AA       ; CP 0xAA         - Compare with 0xAA
+000B: CA 0F 00    ; JP Z,0x000F     - Jump to success if equal
+000E: 76          ; HALT            - Error (A still has wrong value)
+
+000F: 3E 42       ; LD A,0x42       - Success code
+0011: 76          ; HALT            - Success!
+
+; Expected: A = 0x42 if [0x0050] read/write works
+; If A != 0x42, then memory indirect operations are broken

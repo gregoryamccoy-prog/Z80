@@ -1,0 +1,13 @@
+# Z80 Test ROM - Simple Counter
+# Counts from 0 to 255 repeatedly
+#
+# Expected behavior:
+# 1. Start with A=FF (reset value)
+# 2. Increment A continuously
+# 3. Watch A count: FF→00→01→02→...→FE→FF→00...
+#
+# Format: address value (address in decimal, value in hex)
+
+0 3C
+1 18
+2 FD

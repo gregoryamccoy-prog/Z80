@@ -1,0 +1,29 @@
+# Z80 Test ROM - Register Transfer Test
+# Tests LD r,r' instructions
+#
+# Expected behavior:
+# 1. Load A=42 (0x2A)
+# 2. Copy A to all registers: B,C,D,E,H,L
+# 3. Add them all together in A
+# 4. Loop
+#
+# A should end up with 42*6 = 252 (0xFC) after one iteration
+#
+# Format: address value (address in decimal, value in hex)
+
+0 3E
+1 2A
+2 47
+3 4F
+4 57
+5 5F
+6 67
+7 6F
+8 80
+9 81
+10 82
+11 83
+12 84
+13 85
+14 18
+15 EA

@@ -1,0 +1,19 @@
+# Z80 Test ROM - Addition Test
+# This ROM loads two numbers and adds them by incrementing A
+#
+# Expected behavior:
+# 1. Load 0x05 into A
+# 2. Increment A five times (A becomes 0x0A = 10)
+# 3. Loop forever incrementing
+#
+# Format: address value (address in decimal, value in hex)
+
+0 3E
+1 05
+2 3C
+3 3C
+4 3C
+5 3C
+6 3C
+7 18
+8 F9

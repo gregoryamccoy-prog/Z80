@@ -1,0 +1,34 @@
+; Subroutine Test - Tests CALL, RET, PUSH, POP, and JP
+; This program demonstrates subroutine calls and stack operations
+
+0000: 31 00 FF    ; LD SP,0xFF00    - Initialize stack pointer
+0003: 3E 05       ; LD A,05         - Load A with 5
+0005: CD 10 00    ; CALL 0x0010     - Call increment subroutine
+0008: CD 15 00    ; CALL 0x0015     - Call double subroutine
+000B: C3 1B 00    ; JP 0x001B       - Jump to end
+000E: 76          ; HALT            - Should never reach (dead code)
+000F: 76          ; HALT
+
+; Increment subroutine at 0x0010
+0010: 3C          ; INC A           - Increment A (5 -> 6)
+0011: C5          ; PUSH BC         - Save BC
+0012: C1          ; POP BC          - Restore BC
+0013: C9          ; RET             - Return to caller
+
+; Double subroutine at 0x0015
+0015: 87          ; ADD A,A         - Double A (6 -> 12 = 0x0C)
+0016: 47          ; LD B,A          - Copy result to B
+0017: E5          ; PUSH HL         - Save HL
+0018: E1          ; POP HL          - Restore HL
+0019: C9          ; RET             - Return to caller
+
+; End at 0x001B
+001B: AF          ; XOR A           - Clear A (12 XOR 12 = 0)
+001C: 76          ; HALT            - Stop
+
+; Expected final state:
+; A = 0x00 (cleared by XOR A)
+; B = 0x0C (12 from double)
+; SP = 0xFF00 (back to original after balanced CALL/RET)
+; PC = 0x001D (after HALT)
+; Flags: Z=1 (A is zero), S=0, PV=1 (even parity), C=0

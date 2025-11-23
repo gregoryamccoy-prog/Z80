@@ -1,0 +1,111 @@
+; Memory Operations Test - Tests all memory indirect operations
+; Tests: LD r,(HL), LD (HL),r, LD (BC/DE),A, LD A,(BC/DE), LD (nn),A, LD A,(nn)
+;        ADD/SUB with (HL), AND/OR/XOR/CP with (HL), INC/DEC (HL)
+
+0000: 31 00 F0    ; LD SP,0xF000    - Initialize stack
+0003: 21 50 00    ; LD HL,0x0050    - Point HL to data area
+
+; Test LD (HL),r and LD r,(HL)
+0006: 3E AA       ; LD A,0xAA       - Load test value
+0008: 77          ; LD (HL),A       - Store A at (HL) -> [0x0050] = 0xAA
+0009: 23          ; INC HL          - HL = 0x0051
+000A: 06 BB       ; LD B,0xBB       - Load test value
+000C: 70          ; LD (HL),B       - Store B at (HL) -> [0x0051] = 0xBB
+000D: 23          ; INC HL          - HL = 0x0052
+000E: 0E CC       ; LD C,0xCC       - Load test value
+0010: 71          ; LD (HL),C       - Store C at (HL) -> [0x0052] = 0xCC
+
+; Read back and verify
+0011: 21 50 00    ; LD HL,0x0050    - Reset HL
+0014: 7E          ; LD A,(HL)       - A = [0x0050] = 0xAA
+0015: FE AA       ; CP 0xAA         - Compare
+0017: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+001A: 23          ; INC HL          - HL = 0x0051
+001B: 46          ; LD B,(HL)       - B = [0x0051] = 0xBB
+001C: 78          ; LD A,B          - A = B
+001D: FE BB       ; CP 0xBB         - Compare
+001F: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+
+; Test LD (BC),A and LD A,(BC)
+0022: 01 60 00    ; LD BC,0x0060    - Point BC to data area
+0025: 3E 55       ; LD A,0x55       - Load test value
+0027: 02          ; LD (BC),A       - Store A at (BC) -> [0x0060] = 0x55
+0028: 3E 00       ; LD A,0x00       - Clear A
+002A: 0A          ; LD A,(BC)       - A = [0x0060] = 0x55
+002B: FE 55       ; CP 0x55         - Compare
+002D: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+
+; Test LD (DE),A and LD A,(DE)
+0030: 11 70 00    ; LD DE,0x0070    - Point DE to data area
+0033: 3E 33       ; LD A,0x33       - Load test value
+0035: 12          ; LD (DE),A       - Store A at (DE) -> [0x0070] = 0x33
+0036: 3E 00       ; LD A,0x00       - Clear A
+0038: 1A          ; LD A,(DE)       - A = [0x0070] = 0x33
+0039: FE 33       ; CP 0x33         - Compare
+003B: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+
+; Test LD (nn),A and LD A,(nn)
+003E: 3E 77       ; LD A,0x77       - Load test value
+0040: 32 80 00    ; LD (0x0080),A   - Store A at 0x0080
+0043: 3E 00       ; LD A,0x00       - Clear A
+0045: 3A 80 00    ; LD A,(0x0080)   - A = [0x0080] = 0x77
+0048: FE 77       ; CP 0x77         - Compare
+004A: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+
+; Test INC/DEC (HL) and LD (HL),n
+004D: 21 00 80    ; LD HL,0x8000    - Point HL to data area (safe RAM)
+0050: 36 10       ; LD (HL),0x10    - Store 16 at (HL)
+0052: 34          ; INC (HL)        - [HL] = 17
+0053: 7E          ; LD A,(HL)       - A = [HL] = 17
+0054: FE 11       ; CP 0x11         - Compare with 17
+0056: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+0059: 35          ; DEC (HL)        - [HL] = 16
+005A: 7E          ; LD A,(HL)       - A = [HL] = 16
+005B: FE 10       ; CP 0x10         - Compare with 16
+005D: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+
+; Test ADD A,(HL) and SUB (HL)
+0060: 21 10 80    ; LD HL,0x8010    - Point HL to data (safe RAM)
+0063: 36 0F       ; LD (HL),0x0F    - Store 15 at (HL)
+0065: 3E 10       ; LD A,0x10       - A = 16
+0067: 86          ; ADD A,(HL)      - A = 16 + 15 = 31 (0x1F)
+0068: FE 1F       ; CP 0x1F         - Compare
+006A: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+006D: 96          ; SUB (HL)        - A = 31 - 15 = 16 (0x10)
+006E: FE 10       ; CP 0x10         - Compare
+0070: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+
+; Test AND/OR/XOR/CP with (HL)
+0073: 21 20 80    ; LD HL,0x8020    - Point HL to data (safe RAM)
+0076: 36 F0       ; LD (HL),0xF0    - Store 11110000 at (HL)
+0078: 3E 0F       ; LD A,0x0F       - A = 00001111
+007A: B6          ; OR (HL)         - A = 0F | F0 = FF
+007B: FE FF       ; CP 0xFF         - Compare
+007D: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+0080: 36 55       ; LD (HL),0x55    - Store 01010101
+0082: 3E AA       ; LD A,0xAA       - A = 10101010
+0084: A6          ; AND (HL)        - A = AA & 55 = 00
+0085: FE 00       ; CP 0x00         - Compare
+0087: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+008A: 36 FF       ; LD (HL),0xFF    - Store 11111111
+008C: 3E 3C       ; LD A,0x3C       - A = 00111100
+008E: AE          ; XOR (HL)        - A = 3C XOR FF = C3
+008F: FE C3       ; CP 0xC3         - Compare
+0091: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
+0094: 36 C3       ; LD (HL),0xC3    - Store C3
+0096: BE          ; CP (HL)         - Compare A with [HL] (both 0xC3)
+0097: C2 A0 00    ; JP NZ,error     - Should be equal (Z=1)
+
+; Success!
+009A: 3E 42       ; LD A,0x42       - Load success code
+009C: 76          ; HALT            - Success!
+
+; Error handler
+00A0: 3E FF       ; LD A,0xFF       - Load error code
+00A2: 76          ; HALT            - Error!
+
+; Expected final state if successful:
+; A = 0x42 (success code)
+; Memory contains: [0x0050]=AA, [0x0051]=BB, [0x0052]=CC, [0x0060]=55, 
+;                  [0x0070]=33, [0x0080]=77, [0x8000]=10, [0x8010]=0F, [0x8020]=C3
+; All memory operations working correctly!

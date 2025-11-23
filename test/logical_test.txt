@@ -1,0 +1,31 @@
+; Logical Operations Test - Tests AND, OR, XOR, CP
+; This program demonstrates all logical operations
+
+0000: 3E AA       ; LD A,0xAA       - Load A with 10101010
+0002: 06 55       ; LD B,0x55       - Load B with 01010101
+0004: A0          ; AND B           - A = AA & 55 = 00
+0005: B7          ; OR A            ; A = 00 | 00 = 00 (no change)
+0006: AF          ; XOR A           - A = 00 XOR 00 = 00
+0007: 3E FF       ; LD A,0xFF       - Load A with 11111111
+0009: EE 0F       ; XOR 0x0F        - A = FF XOR 0F = F0
+000B: E6 3C       ; AND 0x3C        - A = F0 & 3C = 30
+000D: F6 03       ; OR 0x03         - A = 30 | 03 = 33
+000F: FE 33       ; CP 0x33         - Compare A with 33 (equal, so Z=1)
+0011: C2 16 00    ; JP NZ,0x0016    - Jump if not zero (shouldn't jump)
+0014: 18 02       ; JR 0x0018       - Skip over dead code
+0016: 76          ; HALT            - Dead code
+0017: 76          ; HALT
+
+0018: 3E 10       ; LD A,0x10       - Load A with 16
+001A: FE 20       ; CP 0x20         - Compare with 32 (A < 32, so C=1, Z=0)
+001C: CA 21 00    ; JP Z,0x0021     - Jump if zero (shouldn't jump)
+001F: 18 02       ; JR 0x0023       - Continue
+0021: 76          ; HALT            - Dead code
+0022: 76          ; HALT
+
+0023: 76          ; HALT            - Success!
+
+; Expected final state:
+; A = 0x10
+; B = 0x55
+; Flags after CP 0x20: Z=0 (not equal), C=1 (A < 0x20), S=1 (result negative)

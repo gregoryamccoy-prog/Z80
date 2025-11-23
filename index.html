@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z80 Microprocessor Simulator</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Z80 Microprocessor Simulator</h1>
+            <div class="status-bar">
+                <span id="cpu-status" class="status-indicator">PAUSED</span>
+                <span id="clock-speed">0 Hz</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="control-panel">
+                <h2>Controls</h2>
+                <div class="control-buttons">
+                    <button id="btn-run" class="btn btn-primary">Run</button>
+                    <button id="btn-pause" class="btn btn-secondary">Pause</button>
+                    <button id="btn-step" class="btn btn-secondary">Step</button>
+                    <button id="btn-reset" class="btn btn-warning">Reset</button>
+                </div>
+                <div class="file-loader">
+                    <label for="file-input">Load Memory:</label>
+                    <input type="file" id="file-input" accept=".txt,.bin">
+                    <span id="file-status"></span>
+                </div>
+                <div class="speed-control">
+                    <label for="speed-slider">Speed:</label>
+                    <input type="range" id="speed-slider" min="1" max="1000" value="100">
+                    <span id="speed-value">100 Hz</span>
+                </div>
+            </section>
+
+            <section class="registers-panel">
+                <h2>Registers</h2>
+                <div class="register-grid">
+                    <div class="register-row">
+                        <div class="register-item">
+                            <label>A:</label>
+                            <span id="reg-a" class="register-value">00</span>
+                        </div>
+                        <div class="register-item">
+                            <label>F:</label>
+                            <span id="reg-f" class="register-value">00</span>
+                        </div>
+                        <div class="register-item">
+                            <label>B:</label>
+                            <span id="reg-b" class="register-value">00</span>
+                        </div>
+                        <div class="register-item">
+                            <label>C:</label>
+                            <span id="reg-c" class="register-value">00</span>
+                        </div>
+                    </div>
+                    <div class="register-row">
+                        <div class="register-item">
+                            <label>D:</label>
+                            <span id="reg-d" class="register-value">00</span>
+                        </div>
+                        <div class="register-item">
+                            <label>E:</label>
+                            <span id="reg-e" class="register-value">00</span>
+                        </div>
+                        <div class="register-item">
+                            <label>H:</label>
+                            <span id="reg-h" class="register-value">00</span>
+                        </div>
+                        <div class="register-item">
+                            <label>L:</label>
+                            <span id="reg-l" class="register-value">00</span>
+                        </div>
+                    </div>
+                    <div class="register-row">
+                        <div class="register-item wide">
+                            <label>PC:</label>
+                            <span id="reg-pc" class="register-value">0000</span>
+                        </div>
+                        <div class="register-item wide">
+                            <label>SP:</label>
+                            <span id="reg-sp" class="register-value">0000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flags-display">
+                    <h3>Flags</h3>
+                    <div class="flag-indicators">
+                        <div class="flag-item">
+                            <label>S:</label>
+                            <span id="flag-s" class="flag-led">0</span>
+                        </div>
+                        <div class="flag-item">
+                            <label>Z:</label>
+                            <span id="flag-z" class="flag-led">0</span>
+                        </div>
+                        <div class="flag-item">
+                            <label>H:</label>
+                            <span id="flag-h" class="flag-led">0</span>
+                        </div>
+                        <div class="flag-item">
+                            <label>PV:</label>
+                            <span id="flag-pv" class="flag-led">0</span>
+                        </div>
+                        <div class="flag-item">
+                            <label>N:</label>
+                            <span id="flag-n" class="flag-led">0</span>
+                        </div>
+                        <div class="flag-item">
+                            <label>C:</label>
+                            <span id="flag-c" class="flag-led">0</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="memory-panel">
+                <h2>Memory View</h2>
+                <div class="memory-controls">
+                    <label for="memory-address">Address (hex):</label>
+                    <input type="text" id="memory-address" value="0000" maxlength="4" placeholder="0000">
+                    <button id="btn-goto-memory" class="btn btn-secondary">Go</button>
+                    <button id="btn-goto-pc" class="btn btn-secondary">Go to PC</button>
+                </div>
+                <div id="memory-view" class="memory-display">
+                    <!-- Memory bytes will be displayed here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Z80 Simulator MVP - Browser-based instruction-level simulator</p>
+        </footer>
+    </div>
+
+    <script type="module" src="src/js/main.js"></script>
+</body>
+</html>

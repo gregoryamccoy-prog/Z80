@@ -1,0 +1,25 @@
+# Z80 Test ROM - Phase 1 Feature Test
+# Tests: LD r,n | LD r,r' | INC/DEC | ADD | SUB
+#
+# Expected behavior:
+# 1. Load B=10, C=5
+# 2. LD A,B (A=10)
+# 3. ADD A,C (A=15)
+# 4. SUB C (A=10)
+# 5. INC A (A=11)
+# 6. DEC A (A=10)
+# 7. Loop forever
+#
+# Format: address value (address in decimal, value in hex)
+
+0 06
+1 0A
+2 0E
+3 05
+4 78
+5 81
+6 91
+7 3C
+8 3D
+9 18
+10 F9
