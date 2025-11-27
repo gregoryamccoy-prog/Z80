@@ -1,0 +1,31 @@
+; CP Instruction Test - Test the compare instruction
+; Test 1: CP with equal values (should set Z=1)
+0000: 3E AA       ; LD A,0xAA
+0002: FE AA       ; CP 0xAA - Compare A with 0xAA (should be equal, Z=1)
+0004: C2 20 00    ; JP NZ,error - Should NOT jump (Z should be 1)
+
+; Test 2: CP with (HL) - equal values
+0007: 21 50 00    ; LD HL,0x0050
+000A: 36 BB       ; LD (HL),0xBB
+000C: 3E BB       ; LD A,0xBB
+000E: BE          ; CP (HL) - Compare A with [HL] (both 0xBB, should be equal, Z=1)
+000F: C2 20 00    ; JP NZ,error - Should NOT jump
+
+; Test 3: CP with unequal values (should set Z=0)
+0012: 3E CC       ; LD A,0xCC
+0014: FE DD       ; CP 0xDD - Compare A with 0xDD (not equal, Z=0)
+0016: CA 20 00    ; JP Z,error - Should NOT jump (Z should be 0)
+
+; Test 4: CP (HL) with unequal values
+0019: 36 EE       ; LD (HL),0xEE - [HL] = 0xEE
+001B: 3E FF       ; LD A,0xFF
+001D: BE          ; CP (HL) - Compare A with [HL] (0xFF vs 0xEE, not equal, Z=0)
+001E: CA 20 00    ; JP Z,error - Should NOT jump
+
+; Success!
+0021: 3E 42       ; LD A,0x42
+0023: 76          ; HALT
+
+; Error handler
+0020: 3E FF       ; LD A,0xFF
+0022: 76          ; HALT

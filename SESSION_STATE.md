@@ -1,14 +1,17 @@
 # Z80 Simulator - Session State
-**Last Updated:** November 22, 2025
+**Last Updated:** November 26, 2025
 
 ## Current Status
 
-### Phase 2: Memory Indirect Operations - ✅ COMPLETE
+### Phase 3: CB-Prefixed Bit Operations - ✅ COMPLETE
 
-**Total Opcodes Implemented:** 205+
+**Total Opcodes Implemented:** 461
 - Phase 1 Extended: 175 opcodes (LD, arithmetic, jumps, calls, stack, logical)
 - Phase 2: 22 memory indirect opcodes
 - 16-bit INC/DEC: 8 opcodes (0x03,0x13,0x23,0x33,0x0B,0x1B,0x2B,0x3B)
+- **Phase 3: 256 CB-prefixed opcodes (rotate/shift, bit test, bit modify)**
+
+### Phase 2: Memory Indirect Operations - ✅ COMPLETE
 
 ### Recent Work (Nov 22, 2025)
 
@@ -71,15 +74,39 @@ If successful, register A should be `0x42`:
 - `0x8010` = 0x0F (ADD/SUB (HL) test)
 - `0x8020` = 0xC3 (AND/OR/XOR/CP test)
 
+### Phase 3 Completion (Nov 26, 2025)
+
+1. **Created CB Opcode Generator**
+   - File: `tools/generate_cb_opcodes.mjs`
+   - Generates all 256 CB opcodes programmatically
+   - Pattern-based: rotate/shift (0x00-0x3F), BIT (0x40-0x7F), RES (0x80-0xBF), SET (0xC0-0xFF)
+   - Output: `data/opcodes_cb.json` (5249 lines)
+
+2. **Implemented CB Instruction Execution**
+   - Added `executeRotateShift()` - handles RLC, RRC, RL, RR, SLA, SRA, SLL, SRL
+   - Added `executeBitTest()` - handles BIT instruction (tests bits 0-7)
+   - Added `executeBitModify()` - handles SET/RES instructions
+   - File: `src/js/instruction_executor.js`
+
+3. **Updated CPU for CB Prefix**
+   - Modified `step()` to detect 0xCB opcode
+   - Fetches second byte and dispatches to CB opcode table
+   - File: `src/js/cpu.js`
+
+4. **Created Comprehensive Test Suite**
+   - `test/cb_debug.txt` - Basic RLC/RRC tests (✅ passes)
+   - `test/cb_final.txt` - 15 comprehensive CB tests (✅ passes)
+   - `test/cb_progressive.txt` - Progressive testing with markers
+   - All tests return A = 0x42 on success
+
 ## Next Steps
 
-### Phase 3: CB-Prefixed Bit Operations
+### Phase 4: ED-Prefixed Extended Operations
 Not yet started. Will include:
-- Create `data/opcodes_cb.json` (256 opcodes)
-- Add CB prefix handler to `CPU.step()`
-- Bit operations: BIT, SET, RES (test/modify individual bits)
-- Rotates/shifts: RLC, RRC, RL, RR, SLA, SRA, SRL
-- Test ROM for bit manipulation
+- Create `data/opcodes_ed.json`
+- Block operations: LDIR, LDDR, CPIR, CPDR
+- 16-bit arithmetic: ADC HL,rr, SBC HL,rr
+- Special I/O and interrupt operations
 
 ### Phase 4: ED-Prefixed Extended Operations
 - Block operations: LDIR, LDDR, CPIR, CPDR

@@ -1,0 +1,5250 @@
+{
+  "0x00": {
+    "opcode": "0x00",
+    "mnemonic": "RLC B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rlc",
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left Circular on B"
+  },
+  "0x01": {
+    "opcode": "0x01",
+    "mnemonic": "RLC C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rlc",
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left Circular on C"
+  },
+  "0x02": {
+    "opcode": "0x02",
+    "mnemonic": "RLC D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rlc",
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left Circular on D"
+  },
+  "0x03": {
+    "opcode": "0x03",
+    "mnemonic": "RLC E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rlc",
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left Circular on E"
+  },
+  "0x04": {
+    "opcode": "0x04",
+    "mnemonic": "RLC H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rlc",
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left Circular on H"
+  },
+  "0x05": {
+    "opcode": "0x05",
+    "mnemonic": "RLC L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rlc",
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left Circular on L"
+  },
+  "0x06": {
+    "opcode": "0x06",
+    "mnemonic": "RLC (HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rlc",
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left Circular on (HL)"
+  },
+  "0x07": {
+    "opcode": "0x07",
+    "mnemonic": "RLC A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rlc",
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left Circular on A"
+  },
+  "0x08": {
+    "opcode": "0x08",
+    "mnemonic": "RRC B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rrc",
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right Circular on B"
+  },
+  "0x09": {
+    "opcode": "0x09",
+    "mnemonic": "RRC C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rrc",
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right Circular on C"
+  },
+  "0x0A": {
+    "opcode": "0x0A",
+    "mnemonic": "RRC D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rrc",
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right Circular on D"
+  },
+  "0x0B": {
+    "opcode": "0x0B",
+    "mnemonic": "RRC E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rrc",
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right Circular on E"
+  },
+  "0x0C": {
+    "opcode": "0x0C",
+    "mnemonic": "RRC H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rrc",
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right Circular on H"
+  },
+  "0x0D": {
+    "opcode": "0x0D",
+    "mnemonic": "RRC L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rrc",
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right Circular on L"
+  },
+  "0x0E": {
+    "opcode": "0x0E",
+    "mnemonic": "RRC (HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rrc",
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right Circular on (HL)"
+  },
+  "0x0F": {
+    "opcode": "0x0F",
+    "mnemonic": "RRC A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rrc",
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right Circular on A"
+  },
+  "0x10": {
+    "opcode": "0x10",
+    "mnemonic": "RL B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rl",
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left through Carry on B"
+  },
+  "0x11": {
+    "opcode": "0x11",
+    "mnemonic": "RL C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rl",
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left through Carry on C"
+  },
+  "0x12": {
+    "opcode": "0x12",
+    "mnemonic": "RL D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rl",
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left through Carry on D"
+  },
+  "0x13": {
+    "opcode": "0x13",
+    "mnemonic": "RL E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rl",
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left through Carry on E"
+  },
+  "0x14": {
+    "opcode": "0x14",
+    "mnemonic": "RL H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rl",
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left through Carry on H"
+  },
+  "0x15": {
+    "opcode": "0x15",
+    "mnemonic": "RL L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rl",
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left through Carry on L"
+  },
+  "0x16": {
+    "opcode": "0x16",
+    "mnemonic": "RL (HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rl",
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left through Carry on (HL)"
+  },
+  "0x17": {
+    "opcode": "0x17",
+    "mnemonic": "RL A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rl",
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Left through Carry on A"
+  },
+  "0x18": {
+    "opcode": "0x18",
+    "mnemonic": "RR B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rr",
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right through Carry on B"
+  },
+  "0x19": {
+    "opcode": "0x19",
+    "mnemonic": "RR C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rr",
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right through Carry on C"
+  },
+  "0x1A": {
+    "opcode": "0x1A",
+    "mnemonic": "RR D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rr",
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right through Carry on D"
+  },
+  "0x1B": {
+    "opcode": "0x1B",
+    "mnemonic": "RR E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rr",
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right through Carry on E"
+  },
+  "0x1C": {
+    "opcode": "0x1C",
+    "mnemonic": "RR H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rr",
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right through Carry on H"
+  },
+  "0x1D": {
+    "opcode": "0x1D",
+    "mnemonic": "RR L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rr",
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right through Carry on L"
+  },
+  "0x1E": {
+    "opcode": "0x1E",
+    "mnemonic": "RR (HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rr",
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right through Carry on (HL)"
+  },
+  "0x1F": {
+    "opcode": "0x1F",
+    "mnemonic": "RR A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "rr",
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Rotate Right through Carry on A"
+  },
+  "0x20": {
+    "opcode": "0x20",
+    "mnemonic": "SLA B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sla",
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Arithmetic on B"
+  },
+  "0x21": {
+    "opcode": "0x21",
+    "mnemonic": "SLA C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sla",
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Arithmetic on C"
+  },
+  "0x22": {
+    "opcode": "0x22",
+    "mnemonic": "SLA D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sla",
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Arithmetic on D"
+  },
+  "0x23": {
+    "opcode": "0x23",
+    "mnemonic": "SLA E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sla",
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Arithmetic on E"
+  },
+  "0x24": {
+    "opcode": "0x24",
+    "mnemonic": "SLA H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sla",
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Arithmetic on H"
+  },
+  "0x25": {
+    "opcode": "0x25",
+    "mnemonic": "SLA L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sla",
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Arithmetic on L"
+  },
+  "0x26": {
+    "opcode": "0x26",
+    "mnemonic": "SLA (HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sla",
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Arithmetic on (HL)"
+  },
+  "0x27": {
+    "opcode": "0x27",
+    "mnemonic": "SLA A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sla",
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Arithmetic on A"
+  },
+  "0x28": {
+    "opcode": "0x28",
+    "mnemonic": "SRA B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sra",
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Arithmetic on B"
+  },
+  "0x29": {
+    "opcode": "0x29",
+    "mnemonic": "SRA C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sra",
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Arithmetic on C"
+  },
+  "0x2A": {
+    "opcode": "0x2A",
+    "mnemonic": "SRA D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sra",
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Arithmetic on D"
+  },
+  "0x2B": {
+    "opcode": "0x2B",
+    "mnemonic": "SRA E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sra",
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Arithmetic on E"
+  },
+  "0x2C": {
+    "opcode": "0x2C",
+    "mnemonic": "SRA H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sra",
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Arithmetic on H"
+  },
+  "0x2D": {
+    "opcode": "0x2D",
+    "mnemonic": "SRA L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sra",
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Arithmetic on L"
+  },
+  "0x2E": {
+    "opcode": "0x2E",
+    "mnemonic": "SRA (HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sra",
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Arithmetic on (HL)"
+  },
+  "0x2F": {
+    "opcode": "0x2F",
+    "mnemonic": "SRA A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sra",
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Arithmetic on A"
+  },
+  "0x30": {
+    "opcode": "0x30",
+    "mnemonic": "SLL B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sll",
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Logical (undocumented) on B"
+  },
+  "0x31": {
+    "opcode": "0x31",
+    "mnemonic": "SLL C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sll",
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Logical (undocumented) on C"
+  },
+  "0x32": {
+    "opcode": "0x32",
+    "mnemonic": "SLL D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sll",
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Logical (undocumented) on D"
+  },
+  "0x33": {
+    "opcode": "0x33",
+    "mnemonic": "SLL E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sll",
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Logical (undocumented) on E"
+  },
+  "0x34": {
+    "opcode": "0x34",
+    "mnemonic": "SLL H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sll",
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Logical (undocumented) on H"
+  },
+  "0x35": {
+    "opcode": "0x35",
+    "mnemonic": "SLL L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sll",
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Logical (undocumented) on L"
+  },
+  "0x36": {
+    "opcode": "0x36",
+    "mnemonic": "SLL (HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sll",
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Logical (undocumented) on (HL)"
+  },
+  "0x37": {
+    "opcode": "0x37",
+    "mnemonic": "SLL A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "sll",
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Left Logical (undocumented) on A"
+  },
+  "0x38": {
+    "opcode": "0x38",
+    "mnemonic": "SRL B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "srl",
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Logical on B"
+  },
+  "0x39": {
+    "opcode": "0x39",
+    "mnemonic": "SRL C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "srl",
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Logical on C"
+  },
+  "0x3A": {
+    "opcode": "0x3A",
+    "mnemonic": "SRL D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "srl",
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Logical on D"
+  },
+  "0x3B": {
+    "opcode": "0x3B",
+    "mnemonic": "SRL E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "srl",
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Logical on E"
+  },
+  "0x3C": {
+    "opcode": "0x3C",
+    "mnemonic": "SRL H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "srl",
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Logical on H"
+  },
+  "0x3D": {
+    "opcode": "0x3D",
+    "mnemonic": "SRL L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "srl",
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Logical on L"
+  },
+  "0x3E": {
+    "opcode": "0x3E",
+    "mnemonic": "SRL (HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "srl",
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Logical on (HL)"
+  },
+  "0x3F": {
+    "opcode": "0x3F",
+    "mnemonic": "SRL A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "rotate_shift",
+      "subtype": "srl",
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Shift Right Logical on A"
+  },
+  "0x40": {
+    "opcode": "0x40",
+    "mnemonic": "BIT 0,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 0,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 0 of B"
+  },
+  "0x41": {
+    "opcode": "0x41",
+    "mnemonic": "BIT 0,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 0,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 0 of C"
+  },
+  "0x42": {
+    "opcode": "0x42",
+    "mnemonic": "BIT 0,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 0,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 0 of D"
+  },
+  "0x43": {
+    "opcode": "0x43",
+    "mnemonic": "BIT 0,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 0,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 0 of E"
+  },
+  "0x44": {
+    "opcode": "0x44",
+    "mnemonic": "BIT 0,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 0,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 0 of H"
+  },
+  "0x45": {
+    "opcode": "0x45",
+    "mnemonic": "BIT 0,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 0,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 0 of L"
+  },
+  "0x46": {
+    "opcode": "0x46",
+    "mnemonic": "BIT 0,(HL)",
+    "bytes": 2,
+    "cycles": 12,
+    "operation": {
+      "type": "bit_test",
+      "bit": 0,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 0 of (HL)"
+  },
+  "0x47": {
+    "opcode": "0x47",
+    "mnemonic": "BIT 0,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 0,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 0 of A"
+  },
+  "0x48": {
+    "opcode": "0x48",
+    "mnemonic": "BIT 1,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 1,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 1 of B"
+  },
+  "0x49": {
+    "opcode": "0x49",
+    "mnemonic": "BIT 1,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 1,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 1 of C"
+  },
+  "0x4A": {
+    "opcode": "0x4A",
+    "mnemonic": "BIT 1,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 1,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 1 of D"
+  },
+  "0x4B": {
+    "opcode": "0x4B",
+    "mnemonic": "BIT 1,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 1,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 1 of E"
+  },
+  "0x4C": {
+    "opcode": "0x4C",
+    "mnemonic": "BIT 1,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 1,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 1 of H"
+  },
+  "0x4D": {
+    "opcode": "0x4D",
+    "mnemonic": "BIT 1,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 1,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 1 of L"
+  },
+  "0x4E": {
+    "opcode": "0x4E",
+    "mnemonic": "BIT 1,(HL)",
+    "bytes": 2,
+    "cycles": 12,
+    "operation": {
+      "type": "bit_test",
+      "bit": 1,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 1 of (HL)"
+  },
+  "0x4F": {
+    "opcode": "0x4F",
+    "mnemonic": "BIT 1,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 1,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 1 of A"
+  },
+  "0x50": {
+    "opcode": "0x50",
+    "mnemonic": "BIT 2,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 2,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 2 of B"
+  },
+  "0x51": {
+    "opcode": "0x51",
+    "mnemonic": "BIT 2,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 2,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 2 of C"
+  },
+  "0x52": {
+    "opcode": "0x52",
+    "mnemonic": "BIT 2,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 2,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 2 of D"
+  },
+  "0x53": {
+    "opcode": "0x53",
+    "mnemonic": "BIT 2,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 2,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 2 of E"
+  },
+  "0x54": {
+    "opcode": "0x54",
+    "mnemonic": "BIT 2,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 2,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 2 of H"
+  },
+  "0x55": {
+    "opcode": "0x55",
+    "mnemonic": "BIT 2,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 2,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 2 of L"
+  },
+  "0x56": {
+    "opcode": "0x56",
+    "mnemonic": "BIT 2,(HL)",
+    "bytes": 2,
+    "cycles": 12,
+    "operation": {
+      "type": "bit_test",
+      "bit": 2,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 2 of (HL)"
+  },
+  "0x57": {
+    "opcode": "0x57",
+    "mnemonic": "BIT 2,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 2,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 2 of A"
+  },
+  "0x58": {
+    "opcode": "0x58",
+    "mnemonic": "BIT 3,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 3,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 3 of B"
+  },
+  "0x59": {
+    "opcode": "0x59",
+    "mnemonic": "BIT 3,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 3,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 3 of C"
+  },
+  "0x5A": {
+    "opcode": "0x5A",
+    "mnemonic": "BIT 3,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 3,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 3 of D"
+  },
+  "0x5B": {
+    "opcode": "0x5B",
+    "mnemonic": "BIT 3,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 3,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 3 of E"
+  },
+  "0x5C": {
+    "opcode": "0x5C",
+    "mnemonic": "BIT 3,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 3,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 3 of H"
+  },
+  "0x5D": {
+    "opcode": "0x5D",
+    "mnemonic": "BIT 3,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 3,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 3 of L"
+  },
+  "0x5E": {
+    "opcode": "0x5E",
+    "mnemonic": "BIT 3,(HL)",
+    "bytes": 2,
+    "cycles": 12,
+    "operation": {
+      "type": "bit_test",
+      "bit": 3,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 3 of (HL)"
+  },
+  "0x5F": {
+    "opcode": "0x5F",
+    "mnemonic": "BIT 3,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 3,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 3 of A"
+  },
+  "0x60": {
+    "opcode": "0x60",
+    "mnemonic": "BIT 4,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 4,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 4 of B"
+  },
+  "0x61": {
+    "opcode": "0x61",
+    "mnemonic": "BIT 4,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 4,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 4 of C"
+  },
+  "0x62": {
+    "opcode": "0x62",
+    "mnemonic": "BIT 4,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 4,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 4 of D"
+  },
+  "0x63": {
+    "opcode": "0x63",
+    "mnemonic": "BIT 4,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 4,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 4 of E"
+  },
+  "0x64": {
+    "opcode": "0x64",
+    "mnemonic": "BIT 4,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 4,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 4 of H"
+  },
+  "0x65": {
+    "opcode": "0x65",
+    "mnemonic": "BIT 4,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 4,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 4 of L"
+  },
+  "0x66": {
+    "opcode": "0x66",
+    "mnemonic": "BIT 4,(HL)",
+    "bytes": 2,
+    "cycles": 12,
+    "operation": {
+      "type": "bit_test",
+      "bit": 4,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 4 of (HL)"
+  },
+  "0x67": {
+    "opcode": "0x67",
+    "mnemonic": "BIT 4,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 4,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 4 of A"
+  },
+  "0x68": {
+    "opcode": "0x68",
+    "mnemonic": "BIT 5,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 5,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 5 of B"
+  },
+  "0x69": {
+    "opcode": "0x69",
+    "mnemonic": "BIT 5,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 5,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 5 of C"
+  },
+  "0x6A": {
+    "opcode": "0x6A",
+    "mnemonic": "BIT 5,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 5,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 5 of D"
+  },
+  "0x6B": {
+    "opcode": "0x6B",
+    "mnemonic": "BIT 5,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 5,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 5 of E"
+  },
+  "0x6C": {
+    "opcode": "0x6C",
+    "mnemonic": "BIT 5,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 5,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 5 of H"
+  },
+  "0x6D": {
+    "opcode": "0x6D",
+    "mnemonic": "BIT 5,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 5,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 5 of L"
+  },
+  "0x6E": {
+    "opcode": "0x6E",
+    "mnemonic": "BIT 5,(HL)",
+    "bytes": 2,
+    "cycles": 12,
+    "operation": {
+      "type": "bit_test",
+      "bit": 5,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 5 of (HL)"
+  },
+  "0x6F": {
+    "opcode": "0x6F",
+    "mnemonic": "BIT 5,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 5,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 5 of A"
+  },
+  "0x70": {
+    "opcode": "0x70",
+    "mnemonic": "BIT 6,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 6,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 6 of B"
+  },
+  "0x71": {
+    "opcode": "0x71",
+    "mnemonic": "BIT 6,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 6,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 6 of C"
+  },
+  "0x72": {
+    "opcode": "0x72",
+    "mnemonic": "BIT 6,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 6,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 6 of D"
+  },
+  "0x73": {
+    "opcode": "0x73",
+    "mnemonic": "BIT 6,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 6,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 6 of E"
+  },
+  "0x74": {
+    "opcode": "0x74",
+    "mnemonic": "BIT 6,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 6,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 6 of H"
+  },
+  "0x75": {
+    "opcode": "0x75",
+    "mnemonic": "BIT 6,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 6,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 6 of L"
+  },
+  "0x76": {
+    "opcode": "0x76",
+    "mnemonic": "BIT 6,(HL)",
+    "bytes": 2,
+    "cycles": 12,
+    "operation": {
+      "type": "bit_test",
+      "bit": 6,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 6 of (HL)"
+  },
+  "0x77": {
+    "opcode": "0x77",
+    "mnemonic": "BIT 6,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 6,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 6 of A"
+  },
+  "0x78": {
+    "opcode": "0x78",
+    "mnemonic": "BIT 7,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 7,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 7 of B"
+  },
+  "0x79": {
+    "opcode": "0x79",
+    "mnemonic": "BIT 7,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 7,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 7 of C"
+  },
+  "0x7A": {
+    "opcode": "0x7A",
+    "mnemonic": "BIT 7,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 7,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 7 of D"
+  },
+  "0x7B": {
+    "opcode": "0x7B",
+    "mnemonic": "BIT 7,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 7,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 7 of E"
+  },
+  "0x7C": {
+    "opcode": "0x7C",
+    "mnemonic": "BIT 7,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 7,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 7 of H"
+  },
+  "0x7D": {
+    "opcode": "0x7D",
+    "mnemonic": "BIT 7,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 7,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 7 of L"
+  },
+  "0x7E": {
+    "opcode": "0x7E",
+    "mnemonic": "BIT 7,(HL)",
+    "bytes": 2,
+    "cycles": 12,
+    "operation": {
+      "type": "bit_test",
+      "bit": 7,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 7 of (HL)"
+  },
+  "0x7F": {
+    "opcode": "0x7F",
+    "mnemonic": "BIT 7,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_test",
+      "bit": 7,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Test bit 7 of A"
+  },
+  "0x80": {
+    "opcode": "0x80",
+    "mnemonic": "RES 0,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 0,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 0 of B"
+  },
+  "0x81": {
+    "opcode": "0x81",
+    "mnemonic": "RES 0,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 0,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 0 of C"
+  },
+  "0x82": {
+    "opcode": "0x82",
+    "mnemonic": "RES 0,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 0,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 0 of D"
+  },
+  "0x83": {
+    "opcode": "0x83",
+    "mnemonic": "RES 0,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 0,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 0 of E"
+  },
+  "0x84": {
+    "opcode": "0x84",
+    "mnemonic": "RES 0,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 0,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 0 of H"
+  },
+  "0x85": {
+    "opcode": "0x85",
+    "mnemonic": "RES 0,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 0,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 0 of L"
+  },
+  "0x86": {
+    "opcode": "0x86",
+    "mnemonic": "RES 0,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 0,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 0 of (HL)"
+  },
+  "0x87": {
+    "opcode": "0x87",
+    "mnemonic": "RES 0,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 0,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 0 of A"
+  },
+  "0x88": {
+    "opcode": "0x88",
+    "mnemonic": "RES 1,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 1,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 1 of B"
+  },
+  "0x89": {
+    "opcode": "0x89",
+    "mnemonic": "RES 1,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 1,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 1 of C"
+  },
+  "0x8A": {
+    "opcode": "0x8A",
+    "mnemonic": "RES 1,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 1,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 1 of D"
+  },
+  "0x8B": {
+    "opcode": "0x8B",
+    "mnemonic": "RES 1,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 1,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 1 of E"
+  },
+  "0x8C": {
+    "opcode": "0x8C",
+    "mnemonic": "RES 1,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 1,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 1 of H"
+  },
+  "0x8D": {
+    "opcode": "0x8D",
+    "mnemonic": "RES 1,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 1,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 1 of L"
+  },
+  "0x8E": {
+    "opcode": "0x8E",
+    "mnemonic": "RES 1,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 1,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 1 of (HL)"
+  },
+  "0x8F": {
+    "opcode": "0x8F",
+    "mnemonic": "RES 1,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 1,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 1 of A"
+  },
+  "0x90": {
+    "opcode": "0x90",
+    "mnemonic": "RES 2,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 2,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 2 of B"
+  },
+  "0x91": {
+    "opcode": "0x91",
+    "mnemonic": "RES 2,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 2,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 2 of C"
+  },
+  "0x92": {
+    "opcode": "0x92",
+    "mnemonic": "RES 2,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 2,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 2 of D"
+  },
+  "0x93": {
+    "opcode": "0x93",
+    "mnemonic": "RES 2,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 2,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 2 of E"
+  },
+  "0x94": {
+    "opcode": "0x94",
+    "mnemonic": "RES 2,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 2,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 2 of H"
+  },
+  "0x95": {
+    "opcode": "0x95",
+    "mnemonic": "RES 2,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 2,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 2 of L"
+  },
+  "0x96": {
+    "opcode": "0x96",
+    "mnemonic": "RES 2,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 2,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 2 of (HL)"
+  },
+  "0x97": {
+    "opcode": "0x97",
+    "mnemonic": "RES 2,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 2,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 2 of A"
+  },
+  "0x98": {
+    "opcode": "0x98",
+    "mnemonic": "RES 3,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 3,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 3 of B"
+  },
+  "0x99": {
+    "opcode": "0x99",
+    "mnemonic": "RES 3,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 3,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 3 of C"
+  },
+  "0x9A": {
+    "opcode": "0x9A",
+    "mnemonic": "RES 3,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 3,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 3 of D"
+  },
+  "0x9B": {
+    "opcode": "0x9B",
+    "mnemonic": "RES 3,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 3,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 3 of E"
+  },
+  "0x9C": {
+    "opcode": "0x9C",
+    "mnemonic": "RES 3,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 3,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 3 of H"
+  },
+  "0x9D": {
+    "opcode": "0x9D",
+    "mnemonic": "RES 3,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 3,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 3 of L"
+  },
+  "0x9E": {
+    "opcode": "0x9E",
+    "mnemonic": "RES 3,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 3,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 3 of (HL)"
+  },
+  "0x9F": {
+    "opcode": "0x9F",
+    "mnemonic": "RES 3,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 3,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 3 of A"
+  },
+  "0xA0": {
+    "opcode": "0xA0",
+    "mnemonic": "RES 4,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 4,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 4 of B"
+  },
+  "0xA1": {
+    "opcode": "0xA1",
+    "mnemonic": "RES 4,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 4,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 4 of C"
+  },
+  "0xA2": {
+    "opcode": "0xA2",
+    "mnemonic": "RES 4,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 4,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 4 of D"
+  },
+  "0xA3": {
+    "opcode": "0xA3",
+    "mnemonic": "RES 4,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 4,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 4 of E"
+  },
+  "0xA4": {
+    "opcode": "0xA4",
+    "mnemonic": "RES 4,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 4,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 4 of H"
+  },
+  "0xA5": {
+    "opcode": "0xA5",
+    "mnemonic": "RES 4,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 4,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 4 of L"
+  },
+  "0xA6": {
+    "opcode": "0xA6",
+    "mnemonic": "RES 4,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 4,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 4 of (HL)"
+  },
+  "0xA7": {
+    "opcode": "0xA7",
+    "mnemonic": "RES 4,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 4,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 4 of A"
+  },
+  "0xA8": {
+    "opcode": "0xA8",
+    "mnemonic": "RES 5,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 5,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 5 of B"
+  },
+  "0xA9": {
+    "opcode": "0xA9",
+    "mnemonic": "RES 5,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 5,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 5 of C"
+  },
+  "0xAA": {
+    "opcode": "0xAA",
+    "mnemonic": "RES 5,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 5,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 5 of D"
+  },
+  "0xAB": {
+    "opcode": "0xAB",
+    "mnemonic": "RES 5,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 5,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 5 of E"
+  },
+  "0xAC": {
+    "opcode": "0xAC",
+    "mnemonic": "RES 5,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 5,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 5 of H"
+  },
+  "0xAD": {
+    "opcode": "0xAD",
+    "mnemonic": "RES 5,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 5,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 5 of L"
+  },
+  "0xAE": {
+    "opcode": "0xAE",
+    "mnemonic": "RES 5,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 5,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 5 of (HL)"
+  },
+  "0xAF": {
+    "opcode": "0xAF",
+    "mnemonic": "RES 5,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 5,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 5 of A"
+  },
+  "0xB0": {
+    "opcode": "0xB0",
+    "mnemonic": "RES 6,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 6,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 6 of B"
+  },
+  "0xB1": {
+    "opcode": "0xB1",
+    "mnemonic": "RES 6,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 6,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 6 of C"
+  },
+  "0xB2": {
+    "opcode": "0xB2",
+    "mnemonic": "RES 6,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 6,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 6 of D"
+  },
+  "0xB3": {
+    "opcode": "0xB3",
+    "mnemonic": "RES 6,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 6,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 6 of E"
+  },
+  "0xB4": {
+    "opcode": "0xB4",
+    "mnemonic": "RES 6,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 6,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 6 of H"
+  },
+  "0xB5": {
+    "opcode": "0xB5",
+    "mnemonic": "RES 6,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 6,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 6 of L"
+  },
+  "0xB6": {
+    "opcode": "0xB6",
+    "mnemonic": "RES 6,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 6,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 6 of (HL)"
+  },
+  "0xB7": {
+    "opcode": "0xB7",
+    "mnemonic": "RES 6,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 6,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 6 of A"
+  },
+  "0xB8": {
+    "opcode": "0xB8",
+    "mnemonic": "RES 7,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 7,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 7 of B"
+  },
+  "0xB9": {
+    "opcode": "0xB9",
+    "mnemonic": "RES 7,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 7,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 7 of C"
+  },
+  "0xBA": {
+    "opcode": "0xBA",
+    "mnemonic": "RES 7,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 7,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 7 of D"
+  },
+  "0xBB": {
+    "opcode": "0xBB",
+    "mnemonic": "RES 7,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 7,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 7 of E"
+  },
+  "0xBC": {
+    "opcode": "0xBC",
+    "mnemonic": "RES 7,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 7,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 7 of H"
+  },
+  "0xBD": {
+    "opcode": "0xBD",
+    "mnemonic": "RES 7,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 7,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 7 of L"
+  },
+  "0xBE": {
+    "opcode": "0xBE",
+    "mnemonic": "RES 7,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 7,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 7 of (HL)"
+  },
+  "0xBF": {
+    "opcode": "0xBF",
+    "mnemonic": "RES 7,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "res",
+      "bit": 7,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Reset bit 7 of A"
+  },
+  "0xC0": {
+    "opcode": "0xC0",
+    "mnemonic": "SET 0,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 0,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 0 of B"
+  },
+  "0xC1": {
+    "opcode": "0xC1",
+    "mnemonic": "SET 0,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 0,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 0 of C"
+  },
+  "0xC2": {
+    "opcode": "0xC2",
+    "mnemonic": "SET 0,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 0,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 0 of D"
+  },
+  "0xC3": {
+    "opcode": "0xC3",
+    "mnemonic": "SET 0,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 0,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 0 of E"
+  },
+  "0xC4": {
+    "opcode": "0xC4",
+    "mnemonic": "SET 0,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 0,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 0 of H"
+  },
+  "0xC5": {
+    "opcode": "0xC5",
+    "mnemonic": "SET 0,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 0,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 0 of L"
+  },
+  "0xC6": {
+    "opcode": "0xC6",
+    "mnemonic": "SET 0,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 0,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 0 of (HL)"
+  },
+  "0xC7": {
+    "opcode": "0xC7",
+    "mnemonic": "SET 0,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 0,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 0 of A"
+  },
+  "0xC8": {
+    "opcode": "0xC8",
+    "mnemonic": "SET 1,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 1,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 1 of B"
+  },
+  "0xC9": {
+    "opcode": "0xC9",
+    "mnemonic": "SET 1,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 1,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 1 of C"
+  },
+  "0xCA": {
+    "opcode": "0xCA",
+    "mnemonic": "SET 1,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 1,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 1 of D"
+  },
+  "0xCB": {
+    "opcode": "0xCB",
+    "mnemonic": "SET 1,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 1,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 1 of E"
+  },
+  "0xCC": {
+    "opcode": "0xCC",
+    "mnemonic": "SET 1,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 1,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 1 of H"
+  },
+  "0xCD": {
+    "opcode": "0xCD",
+    "mnemonic": "SET 1,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 1,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 1 of L"
+  },
+  "0xCE": {
+    "opcode": "0xCE",
+    "mnemonic": "SET 1,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 1,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 1 of (HL)"
+  },
+  "0xCF": {
+    "opcode": "0xCF",
+    "mnemonic": "SET 1,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 1,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 1 of A"
+  },
+  "0xD0": {
+    "opcode": "0xD0",
+    "mnemonic": "SET 2,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 2,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 2 of B"
+  },
+  "0xD1": {
+    "opcode": "0xD1",
+    "mnemonic": "SET 2,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 2,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 2 of C"
+  },
+  "0xD2": {
+    "opcode": "0xD2",
+    "mnemonic": "SET 2,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 2,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 2 of D"
+  },
+  "0xD3": {
+    "opcode": "0xD3",
+    "mnemonic": "SET 2,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 2,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 2 of E"
+  },
+  "0xD4": {
+    "opcode": "0xD4",
+    "mnemonic": "SET 2,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 2,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 2 of H"
+  },
+  "0xD5": {
+    "opcode": "0xD5",
+    "mnemonic": "SET 2,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 2,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 2 of L"
+  },
+  "0xD6": {
+    "opcode": "0xD6",
+    "mnemonic": "SET 2,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 2,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 2 of (HL)"
+  },
+  "0xD7": {
+    "opcode": "0xD7",
+    "mnemonic": "SET 2,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 2,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 2 of A"
+  },
+  "0xD8": {
+    "opcode": "0xD8",
+    "mnemonic": "SET 3,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 3,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 3 of B"
+  },
+  "0xD9": {
+    "opcode": "0xD9",
+    "mnemonic": "SET 3,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 3,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 3 of C"
+  },
+  "0xDA": {
+    "opcode": "0xDA",
+    "mnemonic": "SET 3,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 3,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 3 of D"
+  },
+  "0xDB": {
+    "opcode": "0xDB",
+    "mnemonic": "SET 3,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 3,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 3 of E"
+  },
+  "0xDC": {
+    "opcode": "0xDC",
+    "mnemonic": "SET 3,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 3,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 3 of H"
+  },
+  "0xDD": {
+    "opcode": "0xDD",
+    "mnemonic": "SET 3,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 3,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 3 of L"
+  },
+  "0xDE": {
+    "opcode": "0xDE",
+    "mnemonic": "SET 3,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 3,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 3 of (HL)"
+  },
+  "0xDF": {
+    "opcode": "0xDF",
+    "mnemonic": "SET 3,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 3,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 3 of A"
+  },
+  "0xE0": {
+    "opcode": "0xE0",
+    "mnemonic": "SET 4,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 4,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 4 of B"
+  },
+  "0xE1": {
+    "opcode": "0xE1",
+    "mnemonic": "SET 4,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 4,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 4 of C"
+  },
+  "0xE2": {
+    "opcode": "0xE2",
+    "mnemonic": "SET 4,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 4,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 4 of D"
+  },
+  "0xE3": {
+    "opcode": "0xE3",
+    "mnemonic": "SET 4,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 4,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 4 of E"
+  },
+  "0xE4": {
+    "opcode": "0xE4",
+    "mnemonic": "SET 4,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 4,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 4 of H"
+  },
+  "0xE5": {
+    "opcode": "0xE5",
+    "mnemonic": "SET 4,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 4,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 4 of L"
+  },
+  "0xE6": {
+    "opcode": "0xE6",
+    "mnemonic": "SET 4,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 4,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 4 of (HL)"
+  },
+  "0xE7": {
+    "opcode": "0xE7",
+    "mnemonic": "SET 4,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 4,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 4 of A"
+  },
+  "0xE8": {
+    "opcode": "0xE8",
+    "mnemonic": "SET 5,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 5,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 5 of B"
+  },
+  "0xE9": {
+    "opcode": "0xE9",
+    "mnemonic": "SET 5,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 5,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 5 of C"
+  },
+  "0xEA": {
+    "opcode": "0xEA",
+    "mnemonic": "SET 5,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 5,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 5 of D"
+  },
+  "0xEB": {
+    "opcode": "0xEB",
+    "mnemonic": "SET 5,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 5,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 5 of E"
+  },
+  "0xEC": {
+    "opcode": "0xEC",
+    "mnemonic": "SET 5,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 5,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 5 of H"
+  },
+  "0xED": {
+    "opcode": "0xED",
+    "mnemonic": "SET 5,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 5,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 5 of L"
+  },
+  "0xEE": {
+    "opcode": "0xEE",
+    "mnemonic": "SET 5,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 5,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 5 of (HL)"
+  },
+  "0xEF": {
+    "opcode": "0xEF",
+    "mnemonic": "SET 5,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 5,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 5 of A"
+  },
+  "0xF0": {
+    "opcode": "0xF0",
+    "mnemonic": "SET 6,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 6,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 6 of B"
+  },
+  "0xF1": {
+    "opcode": "0xF1",
+    "mnemonic": "SET 6,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 6,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 6 of C"
+  },
+  "0xF2": {
+    "opcode": "0xF2",
+    "mnemonic": "SET 6,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 6,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 6 of D"
+  },
+  "0xF3": {
+    "opcode": "0xF3",
+    "mnemonic": "SET 6,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 6,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 6 of E"
+  },
+  "0xF4": {
+    "opcode": "0xF4",
+    "mnemonic": "SET 6,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 6,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 6 of H"
+  },
+  "0xF5": {
+    "opcode": "0xF5",
+    "mnemonic": "SET 6,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 6,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 6 of L"
+  },
+  "0xF6": {
+    "opcode": "0xF6",
+    "mnemonic": "SET 6,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 6,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 6 of (HL)"
+  },
+  "0xF7": {
+    "opcode": "0xF7",
+    "mnemonic": "SET 6,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 6,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 6 of A"
+  },
+  "0xF8": {
+    "opcode": "0xF8",
+    "mnemonic": "SET 7,B",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 7,
+      "operand": "B"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 7 of B"
+  },
+  "0xF9": {
+    "opcode": "0xF9",
+    "mnemonic": "SET 7,C",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 7,
+      "operand": "C"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 7 of C"
+  },
+  "0xFA": {
+    "opcode": "0xFA",
+    "mnemonic": "SET 7,D",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 7,
+      "operand": "D"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 7 of D"
+  },
+  "0xFB": {
+    "opcode": "0xFB",
+    "mnemonic": "SET 7,E",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 7,
+      "operand": "E"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 7 of E"
+  },
+  "0xFC": {
+    "opcode": "0xFC",
+    "mnemonic": "SET 7,H",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 7,
+      "operand": "H"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 7 of H"
+  },
+  "0xFD": {
+    "opcode": "0xFD",
+    "mnemonic": "SET 7,L",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 7,
+      "operand": "L"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 7 of L"
+  },
+  "0xFE": {
+    "opcode": "0xFE",
+    "mnemonic": "SET 7,(HL)",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 7,
+      "operand": "(HL)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 7 of (HL)"
+  },
+  "0xFF": {
+    "opcode": "0xFF",
+    "mnemonic": "SET 7,A",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "bit_modify",
+      "subtype": "set",
+      "bit": 7,
+      "operand": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set bit 7 of A"
+  }
+}

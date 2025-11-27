@@ -222,13 +222,34 @@ export class CPU {
         // Increment refresh register (lower 7 bits)
         this.R = (this.R & 0x80) | ((this.R + 1) & 0x7F);
         
-        // Look up instruction
-        const opcodeDef = this.opcodeManager.getInstruction(null, opcode);
-        
-        if (!opcodeDef) {
-            console.error(`Unknown opcode: 0x${opcode.toString(16).toUpperCase().padStart(2, '0')} at PC=${(this.PC - 1).toString(16).toUpperCase().padStart(4, '0')}`);
-            this.halted = true;
-            return 4;
+        // Handle prefixed instructions
+        let opcodeDef;
+        if (opcode === 0xCB) {
+            // CB prefix - bit operations
+            const cbOpcode = this.fetchByte();
+            opcodeDef = this.opcodeManager.getInstruction('CB', cbOpcode);
+            if (!opcodeDef) {
+                console.error(`Unknown CB opcode: 0xCB${cbOpcode.toString(16).toUpperCase().padStart(2, '0')} at PC=${(this.PC - 2).toString(16).toUpperCase().padStart(4, '0')}`);
+                this.halted = true;
+                return 4;
+            }
+        } else if (opcode === 0xED) {
+            // ED prefix - extended operations
+            const edOpcode = this.fetchByte();
+            opcodeDef = this.opcodeManager.getInstruction('ED', edOpcode);
+            if (!opcodeDef) {
+                console.error(`Unknown ED opcode: 0xED${edOpcode.toString(16).toUpperCase().padStart(2, '0')} at PC=${(this.PC - 2).toString(16).toUpperCase().padStart(4, '0')}`);
+                this.halted = true;
+                return 4;
+            }
+        } else {
+            // Look up unprefixed instruction
+            opcodeDef = this.opcodeManager.getInstruction(null, opcode);
+            if (!opcodeDef) {
+                console.error(`Unknown opcode: 0x${opcode.toString(16).toUpperCase().padStart(2, '0')} at PC=${(this.PC - 1).toString(16).toUpperCase().padStart(4, '0')}`);
+                this.halted = true;
+                return 4;
+            }
         }
         
         // Execute instruction

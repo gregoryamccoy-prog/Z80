@@ -1,0 +1,133 @@
+; Comprehensive CB test - runs all tests to completion
+; Success: A = 0x42, Failure: specific error codes
+
+0000: 31 00 F0    ; LD SP,0xF000
+
+; Test 1: RLC
+0003: 3E 81       ; LD A,0x81
+0005: CB 07       ; RLC A - should be 0x03
+0007: FE 03       ; CP 0x03
+0009: C2 00 01    ; JP NZ,error1
+
+; Test 2: RRC
+000C: 3E 81       ; LD A,0x81
+000E: CB 0F       ; RRC A - should be 0xC0
+0010: FE C0       ; CP 0xC0
+0012: C2 03 01    ; JP NZ,error2
+
+; Test 3: RL (with carry)
+0015: 37          ; SCF - set carry
+0016: 3E 80       ; LD A,0x80
+0018: CB 17       ; RL A - should be 0x01
+001A: FE 01       ; CP 0x01
+001C: C2 06 01    ; JP NZ,error3
+
+; Test 4: RR (with carry)
+001F: 37          ; SCF - set carry
+0020: 3E 01       ; LD A,0x01
+0022: CB 1F       ; RR A - should be 0x80
+0024: FE 80       ; CP 0x80
+0026: C2 09 01    ; JP NZ,error4
+
+; Test 5: SLA
+0029: 3E 40       ; LD A,0x40
+002B: CB 27       ; SLA A - should be 0x80
+002D: FE 80       ; CP 0x80
+002F: C2 0C 01    ; JP NZ,error5
+
+; Test 6: SRA
+0032: 3E 81       ; LD A,0x81
+0034: CB 2F       ; SRA A - should be 0xC0
+0036: FE C0       ; CP 0xC0
+0038: C2 0F 01    ; JP NZ,error6
+
+; Test 7: SRL
+003B: 3E 81       ; LD A,0x81
+003D: CB 3F       ; SRL A - should be 0x40
+003F: FE 40       ; CP 0x40
+0041: C2 12 01    ; JP NZ,error7
+
+; Test 8: BIT (test bit set)
+0044: 3E 80       ; LD A,0x80
+0046: CB 7F       ; BIT 7,A - should set Z=0
+0048: CA 15 01    ; JP Z,error8
+
+; Test 9: BIT (test bit clear)
+004B: 3E 00       ; LD A,0x00
+004D: CB 47       ; BIT 0,A - should set Z=1
+004F: C2 18 01    ; JP NZ,error9
+
+; Test 10: SET
+0052: 3E 00       ; LD A,0x00
+0054: CB DF       ; SET 3,A - should be 0x08
+0056: FE 08       ; CP 0x08
+0058: C2 1B 01    ; JP NZ,error10
+
+; Test 11: RES
+005B: 3E FF       ; LD A,0xFF
+005D: CB 9F       ; RES 3,A - should be 0xF7
+005F: FE F7       ; CP 0xF7
+0061: C2 1E 01    ; JP NZ,error11
+
+; Test 12: RLC on (HL)
+0064: 21 00 80    ; LD HL,0x8000
+0067: 36 AA       ; LD (HL),0xAA
+0069: CB 06       ; RLC (HL) - should be 0x55
+006B: 7E          ; LD A,(HL)
+006C: FE 55       ; CP 0x55
+006E: C2 21 01    ; JP NZ,error12
+
+; Test 13: BIT on (HL)
+0071: 36 80       ; LD (HL),0x80
+0073: CB 7E       ; BIT 7,(HL) - should set Z=0
+0075: CA 24 01    ; JP Z,error13
+
+; Test 14: SET on (HL)
+0078: 36 00       ; LD (HL),0x00
+007A: CB CE       ; SET 1,(HL) - should be 0x02
+007C: 7E          ; LD A,(HL)
+007D: FE 02       ; CP 0x02
+007F: C2 27 01    ; JP NZ,error14
+
+; Test 15: RES on (HL)
+0082: 36 FF       ; LD (HL),0xFF
+0084: CB 96       ; RES 2,(HL) - should be 0xFB
+0086: 7E          ; LD A,(HL)
+0087: FE FB       ; CP 0xFB
+0089: C2 2A 01    ; JP NZ,error15
+
+; Success!
+008C: 3E 42       ; LD A,0x42
+008E: 76          ; HALT
+
+; Error handlers
+0100: 3E E1       ; error1: LD A,0xE1 - RLC error
+0102: 76          ; HALT
+0103: 3E E2       ; error2: LD A,0xE2 - RRC error
+0105: 76          ; HALT
+0106: 3E E3       ; error3: LD A,0xE3 - RL error
+0108: 76          ; HALT
+0109: 3E E4       ; error4: LD A,0xE4 - RR error
+010B: 76          ; HALT
+010C: 3E E5       ; error5: LD A,0xE5 - SLA error
+010E: 76          ; HALT
+010F: 3E E6       ; error6: LD A,0xE6 - SRA error
+0111: 76          ; HALT
+0112: 3E E7       ; error7: LD A,0xE7 - SRL error
+0114: 76          ; HALT
+0115: 3E E8       ; error8: LD A,0xE8 - BIT set error
+0117: 76          ; HALT
+0118: 3E E9       ; error9: LD A,0xE9 - BIT clear error
+011A: 76          ; HALT
+011B: 3E EA       ; error10: LD A,0xEA - SET error
+011D: 76          ; HALT
+011E: 3E EB       ; error11: LD A,0xEB - RES error
+0120: 76          ; HALT
+0121: 3E EC       ; error12: LD A,0xEC - RLC (HL) error
+0123: 76          ; HALT
+0124: 3E ED       ; error13: LD A,0xED - BIT (HL) error
+0126: 76          ; HALT
+0127: 3E EE       ; error14: LD A,0xEE - SET (HL) error
+0129: 76          ; HALT
+012A: 3E EF       ; error15: LD A,0xEF - RES (HL) error
+012C: 76          ; HALT

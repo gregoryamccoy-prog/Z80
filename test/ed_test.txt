@@ -1,0 +1,118 @@
+; ED Instructions Test ROM
+; Tests block operations and 16-bit arithmetic
+; Success: A = 0x42, Failure: specific error codes
+
+0000: 31 00 F0    ; LD SP,0xF000    - Initialize stack
+
+; Test 1: LDIR - Block copy
+0003: 21 00 80    ; LD HL,0x8000    - Source address
+0006: 11 10 80    ; LD DE,0x8010    - Destination address
+0009: 01 05 00    ; LD BC,5         - Copy 5 bytes
+000C: 36 AA       ; LD (HL),0xAA    - Write test pattern
+000E: 23          ; INC HL
+000F: 36 BB       ; LD (HL),0xBB
+0011: 23          ; INC HL
+0012: 36 CC       ; LD (HL),0xCC
+0014: 23          ; INC HL
+0015: 36 DD       ; LD (HL),0xDD
+0017: 23          ; INC HL
+0018: 36 EE       ; LD (HL),0xEE
+001A: 21 00 80    ; LD HL,0x8000    - Reset to start
+001D: ED B0       ; LDIR            - Copy block
+001F: 1B          ; DEC DE          - DE points past last byte, back up
+0020: 1A          ; LD A,(DE)       - Load last byte copied
+0021: FE EE       ; CP 0xEE         - Should be 0xEE
+0023: C2 00 01    ; JP NZ,error1
+
+; Test 2: NEG - Negate accumulator
+0026: 3E 05       ; LD A,0x05
+0028: ED 44       ; NEG             - A = -5 = 0xFB
+002A: FE FB       ; CP 0xFB
+002C: C2 03 01    ; JP NZ,error2
+
+; Test 3: ADC HL,BC - 16-bit add with carry
+002F: 21 00 10    ; LD HL,0x1000
+0032: 01 50 00    ; LD BC,0x0050
+0035: 37          ; SCF             - Set carry
+0036: ED 4A       ; ADC HL,BC       - HL = 0x1000 + 0x0050 + 1 = 0x1051
+0038: 7C          ; LD A,H
+0039: FE 10       ; CP 0x10
+003B: C2 06 01    ; JP NZ,error3
+003E: 7D          ; LD A,L
+003F: FE 51       ; CP 0x51
+0041: C2 06 01    ; JP NZ,error3
+
+; Test 4: SBC HL,DE - 16-bit subtract with carry
+0044: 21 00 20    ; LD HL,0x2000
+0047: 11 50 00    ; LD DE,0x0050
+004A: 37          ; SCF             - Set carry
+004B: 3F          ; CCF             - Clear carry
+004C: ED 52       ; SBC HL,DE       - HL = 0x2000 - 0x0050 = 0x1FB0
+004E: 7C          ; LD A,H
+004F: FE 1F       ; CP 0x1F
+0051: C2 09 01    ; JP NZ,error4
+0054: 7D          ; LD A,L
+0055: FE B0       ; CP 0xB0
+0057: C2 09 01    ; JP NZ,error4
+
+; Test 5: LD (nn),HL and LD HL,(nn)
+005A: 21 34 12    ; LD HL,0x1234
+005D: ED 63 20 90 ; LD (0x9020),HL  - Store HL to memory
+0061: 21 00 00    ; LD HL,0x0000    - Clear HL
+0064: ED 6B 20 90 ; LD HL,(0x9020)  - Load HL from memory
+0068: 7C          ; LD A,H
+0069: FE 12       ; CP 0x12
+006B: C2 0C 01    ; JP NZ,error5
+006E: 7D          ; LD A,L
+006F: FE 34       ; CP 0x34
+0071: C2 0C 01    ; JP NZ,error5
+
+; Test 6: CPIR - Search for byte
+0074: 21 30 90    ; LD HL,0x9030    - Start address
+0077: 36 11       ; LD (HL),0x11    - Store pattern
+0079: 23          ; INC HL
+007A: 36 22       ; LD (HL),0x22
+007C: 23          ; INC HL
+007D: 36 42       ; LD (HL),0x42    - Target byte
+007F: 21 30 90    ; LD HL,0x9030    - Reset to start
+0082: 01 10 00    ; LD BC,16        - Search up to 16 bytes
+0085: 3E 42       ; LD A,0x42       - Search for 0x42
+0087: ED B1       ; CPIR            - Search
+0089: 2B          ; DEC HL          - HL now points past target, back up
+008A: 7E          ; LD A,(HL)       - Load found byte
+008B: FE 42       ; CP 0x42         - Should be 0x42
+008D: C2 0F 01    ; JP NZ,error6
+
+; Test 7: RRD - Rotate Right Digit
+0090: 3E 12       ; LD A,0x12       - A = 0x12
+0092: 21 40 90    ; LD HL,0x9040
+0095: 36 34       ; LD (HL),0x34    - (HL) = 0x34
+0097: ED 67       ; RRD             - A=0x14, (HL)=0x23
+0099: FE 14       ; CP 0x14
+009B: C2 12 01    ; JP NZ,error7
+009E: 7E          ; LD A,(HL)
+009F: FE 23       ; CP 0x23
+00A1: C2 12 01    ; JP NZ,error7
+
+; Success!
+00A4: 3E 42       ; LD A,0x42       - Success code
+00A6: 76          ; HALT
+
+; Error handlers
+0100: 3E E1       ; error1: LD A,0xE1 - LDIR error
+0102: 76          ; HALT
+0103: 3E E2       ; error2: LD A,0xE2 - NEG error
+0105: 76          ; HALT
+0106: 3E E3       ; error3: LD A,0xE3 - ADC HL error
+0108: 76          ; HALT
+0109: 3E E4       ; error4: LD A,0xE4 - SBC HL error
+010B: 76          ; HALT
+010C: 3E E5       ; error5: LD A,0xE5 - LD (nn),HL error
+010E: 76          ; HALT
+010F: 3E E6       ; error6: LD A,0xE6 - CPIR error
+0111: 76          ; HALT
+0112: 3E E7       ; error7: LD A,0xE7 - RRD error
+0114: 76          ; HALT
+
+; Expected result: A = 0x42 (success)
+; All ED-prefixed operations working correctly!

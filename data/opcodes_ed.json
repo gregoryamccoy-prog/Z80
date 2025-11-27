@@ -1,0 +1,972 @@
+{
+  "0x44": {
+    "opcode": "0x44",
+    "mnemonic": "NEG",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "neg",
+      "destination": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Negate A (two's complement)"
+  },
+  "0x4C": {
+    "opcode": "0x4C",
+    "mnemonic": "NEG",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "neg",
+      "destination": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Negate A (two's complement)"
+  },
+  "0x54": {
+    "opcode": "0x54",
+    "mnemonic": "NEG",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "neg",
+      "destination": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Negate A (two's complement)"
+  },
+  "0x5C": {
+    "opcode": "0x5C",
+    "mnemonic": "NEG",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "neg",
+      "destination": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Negate A (two's complement)"
+  },
+  "0x64": {
+    "opcode": "0x64",
+    "mnemonic": "NEG",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "neg",
+      "destination": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Negate A (two's complement)"
+  },
+  "0x6C": {
+    "opcode": "0x6C",
+    "mnemonic": "NEG",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "neg",
+      "destination": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Negate A (two's complement)"
+  },
+  "0x74": {
+    "opcode": "0x74",
+    "mnemonic": "NEG",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "neg",
+      "destination": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Negate A (two's complement)"
+  },
+  "0x7C": {
+    "opcode": "0x7C",
+    "mnemonic": "NEG",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "neg",
+      "destination": "A"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Negate A (two's complement)"
+  },
+  "0x45": {
+    "opcode": "0x45",
+    "mnemonic": "RETN",
+    "bytes": 2,
+    "cycles": 14,
+    "operation": {
+      "type": "special",
+      "subtype": "retn"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Return from non-maskable interrupt"
+  },
+  "0x55": {
+    "opcode": "0x55",
+    "mnemonic": "RETN",
+    "bytes": 2,
+    "cycles": 14,
+    "operation": {
+      "type": "special",
+      "subtype": "retn"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Return from non-maskable interrupt"
+  },
+  "0x65": {
+    "opcode": "0x65",
+    "mnemonic": "RETN",
+    "bytes": 2,
+    "cycles": 14,
+    "operation": {
+      "type": "special",
+      "subtype": "retn"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Return from non-maskable interrupt"
+  },
+  "0x75": {
+    "opcode": "0x75",
+    "mnemonic": "RETN",
+    "bytes": 2,
+    "cycles": 14,
+    "operation": {
+      "type": "special",
+      "subtype": "retn"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Return from non-maskable interrupt"
+  },
+  "0x4D": {
+    "opcode": "0x4D",
+    "mnemonic": "RETI",
+    "bytes": 2,
+    "cycles": 14,
+    "operation": {
+      "type": "special",
+      "subtype": "reti"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Return from maskable interrupt"
+  },
+  "0x5D": {
+    "opcode": "0x5D",
+    "mnemonic": "RETI",
+    "bytes": 2,
+    "cycles": 14,
+    "operation": {
+      "type": "special",
+      "subtype": "reti"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Return from maskable interrupt"
+  },
+  "0x6D": {
+    "opcode": "0x6D",
+    "mnemonic": "RETI",
+    "bytes": 2,
+    "cycles": 14,
+    "operation": {
+      "type": "special",
+      "subtype": "reti"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Return from maskable interrupt"
+  },
+  "0x7D": {
+    "opcode": "0x7D",
+    "mnemonic": "RETI",
+    "bytes": 2,
+    "cycles": 14,
+    "operation": {
+      "type": "special",
+      "subtype": "reti"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Return from maskable interrupt"
+  },
+  "0x46": {
+    "opcode": "0x46",
+    "mnemonic": "IM 0",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "special",
+      "subtype": "im",
+      "mode": 0
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set interrupt mode 0"
+  },
+  "0x56": {
+    "opcode": "0x56",
+    "mnemonic": "IM 1",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "special",
+      "subtype": "im",
+      "mode": 1
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set interrupt mode 1"
+  },
+  "0x5E": {
+    "opcode": "0x5E",
+    "mnemonic": "IM 2",
+    "bytes": 2,
+    "cycles": 8,
+    "operation": {
+      "type": "special",
+      "subtype": "im",
+      "mode": 2
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Set interrupt mode 2"
+  },
+  "0x47": {
+    "opcode": "0x47",
+    "mnemonic": "LD I,A",
+    "bytes": 2,
+    "cycles": 9,
+    "operation": {
+      "type": "load",
+      "destination": "I",
+      "source": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Load interrupt vector register I from A"
+  },
+  "0x57": {
+    "opcode": "0x57",
+    "mnemonic": "LD A,I",
+    "bytes": 2,
+    "cycles": 9,
+    "operation": {
+      "type": "load",
+      "destination": "A",
+      "source": "I"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "IFF",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Load A from interrupt vector register I"
+  },
+  "0x4F": {
+    "opcode": "0x4F",
+    "mnemonic": "LD R,A",
+    "bytes": 2,
+    "cycles": 9,
+    "operation": {
+      "type": "load",
+      "destination": "R",
+      "source": "A"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Load refresh register R from A"
+  },
+  "0x5F": {
+    "opcode": "0x5F",
+    "mnemonic": "LD A,R",
+    "bytes": 2,
+    "cycles": 9,
+    "operation": {
+      "type": "load",
+      "destination": "A",
+      "source": "R"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "IFF",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Load A from refresh register R"
+  },
+  "0x4A": {
+    "opcode": "0x4A",
+    "mnemonic": "ADC HL,BC",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "adc16",
+      "destination": "HL",
+      "source": "BC"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Add BC with carry to HL"
+  },
+  "0x5A": {
+    "opcode": "0x5A",
+    "mnemonic": "ADC HL,DE",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "adc16",
+      "destination": "HL",
+      "source": "DE"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Add DE with carry to HL"
+  },
+  "0x6A": {
+    "opcode": "0x6A",
+    "mnemonic": "ADC HL,HL",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "adc16",
+      "destination": "HL",
+      "source": "HL"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Add HL with carry to HL"
+  },
+  "0x7A": {
+    "opcode": "0x7A",
+    "mnemonic": "ADC HL,SP",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "adc16",
+      "destination": "HL",
+      "source": "SP"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "0",
+      "C": "1"
+    },
+    "description": "Add SP with carry to HL"
+  },
+  "0x42": {
+    "opcode": "0x42",
+    "mnemonic": "SBC HL,BC",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "sbc16",
+      "destination": "HL",
+      "source": "BC"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Subtract BC with carry from HL"
+  },
+  "0x52": {
+    "opcode": "0x52",
+    "mnemonic": "SBC HL,DE",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "sbc16",
+      "destination": "HL",
+      "source": "DE"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Subtract DE with carry from HL"
+  },
+  "0x62": {
+    "opcode": "0x62",
+    "mnemonic": "SBC HL,HL",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "sbc16",
+      "destination": "HL",
+      "source": "HL"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Subtract HL with carry from HL"
+  },
+  "0x72": {
+    "opcode": "0x72",
+    "mnemonic": "SBC HL,SP",
+    "bytes": 2,
+    "cycles": 15,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "sbc16",
+      "destination": "HL",
+      "source": "SP"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "1"
+    },
+    "description": "Subtract SP with carry from HL"
+  },
+  "0x43": {
+    "opcode": "0x43",
+    "mnemonic": "LD (nn),BC",
+    "bytes": 4,
+    "cycles": 20,
+    "operation": {
+      "type": "load",
+      "destination": "(immediate16)",
+      "source": "BC"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Store BC to memory at address nn"
+  },
+  "0x53": {
+    "opcode": "0x53",
+    "mnemonic": "LD (nn),DE",
+    "bytes": 4,
+    "cycles": 20,
+    "operation": {
+      "type": "load",
+      "destination": "(immediate16)",
+      "source": "DE"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Store DE to memory at address nn"
+  },
+  "0x63": {
+    "opcode": "0x63",
+    "mnemonic": "LD (nn),HL",
+    "bytes": 4,
+    "cycles": 20,
+    "operation": {
+      "type": "load",
+      "destination": "(immediate16)",
+      "source": "HL"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Store HL to memory at address nn"
+  },
+  "0x73": {
+    "opcode": "0x73",
+    "mnemonic": "LD (nn),SP",
+    "bytes": 4,
+    "cycles": 20,
+    "operation": {
+      "type": "load",
+      "destination": "(immediate16)",
+      "source": "SP"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Store SP to memory at address nn"
+  },
+  "0x4B": {
+    "opcode": "0x4B",
+    "mnemonic": "LD BC,(nn)",
+    "bytes": 4,
+    "cycles": 20,
+    "operation": {
+      "type": "load",
+      "destination": "BC",
+      "source": "(immediate16)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Load BC from memory at address nn"
+  },
+  "0x5B": {
+    "opcode": "0x5B",
+    "mnemonic": "LD DE,(nn)",
+    "bytes": 4,
+    "cycles": 20,
+    "operation": {
+      "type": "load",
+      "destination": "DE",
+      "source": "(immediate16)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Load DE from memory at address nn"
+  },
+  "0x6B": {
+    "opcode": "0x6B",
+    "mnemonic": "LD HL,(nn)",
+    "bytes": 4,
+    "cycles": 20,
+    "operation": {
+      "type": "load",
+      "destination": "HL",
+      "source": "(immediate16)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Load HL from memory at address nn"
+  },
+  "0x7B": {
+    "opcode": "0x7B",
+    "mnemonic": "LD SP,(nn)",
+    "bytes": 4,
+    "cycles": 20,
+    "operation": {
+      "type": "load",
+      "destination": "SP",
+      "source": "(immediate16)"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    },
+    "description": "Load SP from memory at address nn"
+  },
+  "0x67": {
+    "opcode": "0x67",
+    "mnemonic": "RRD",
+    "bytes": 2,
+    "cycles": 18,
+    "operation": {
+      "type": "special",
+      "subtype": "rrd"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Rotate right digit (nibbles) between A and (HL)"
+  },
+  "0x6F": {
+    "opcode": "0x6F",
+    "mnemonic": "RLD",
+    "bytes": 2,
+    "cycles": 18,
+    "operation": {
+      "type": "special",
+      "subtype": "rld"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "0",
+      "PV": "P",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Rotate left digit (nibbles) between A and (HL)"
+  },
+  "0xA0": {
+    "opcode": "0xA0",
+    "mnemonic": "LDI",
+    "bytes": 2,
+    "cycles": 16,
+    "operation": {
+      "type": "block",
+      "subtype": "ldi"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "0",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Load and Increment: (DE)←(HL), DE++, HL++, BC--"
+  },
+  "0xB0": {
+    "opcode": "0xB0",
+    "mnemonic": "LDIR",
+    "bytes": 2,
+    "cycles": 21,
+    "operation": {
+      "type": "block",
+      "subtype": "ldir"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "0",
+      "PV": "0",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Load, Increment and Repeat: LDI until BC=0"
+  },
+  "0xA8": {
+    "opcode": "0xA8",
+    "mnemonic": "LDD",
+    "bytes": 2,
+    "cycles": 16,
+    "operation": {
+      "type": "block",
+      "subtype": "ldd"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "0",
+      "PV": "1",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Load and Decrement: (DE)←(HL), DE--, HL--, BC--"
+  },
+  "0xB8": {
+    "opcode": "0xB8",
+    "mnemonic": "LDDR",
+    "bytes": 2,
+    "cycles": 21,
+    "operation": {
+      "type": "block",
+      "subtype": "lddr"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "0",
+      "PV": "0",
+      "N": "0",
+      "C": "-"
+    },
+    "description": "Load, Decrement and Repeat: LDD until BC=0"
+  },
+  "0xA1": {
+    "opcode": "0xA1",
+    "mnemonic": "CPI",
+    "bytes": 2,
+    "cycles": 16,
+    "operation": {
+      "type": "block",
+      "subtype": "cpi"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "-"
+    },
+    "description": "Compare and Increment: CP (HL), HL++, BC--"
+  },
+  "0xB1": {
+    "opcode": "0xB1",
+    "mnemonic": "CPIR",
+    "bytes": 2,
+    "cycles": 21,
+    "operation": {
+      "type": "block",
+      "subtype": "cpir"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "-"
+    },
+    "description": "Compare, Increment and Repeat: CPI until BC=0 or Z=1"
+  },
+  "0xA9": {
+    "opcode": "0xA9",
+    "mnemonic": "CPD",
+    "bytes": 2,
+    "cycles": 16,
+    "operation": {
+      "type": "block",
+      "subtype": "cpd"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "-"
+    },
+    "description": "Compare and Decrement: CP (HL), HL--, BC--"
+  },
+  "0xB9": {
+    "opcode": "0xB9",
+    "mnemonic": "CPDR",
+    "bytes": 2,
+    "cycles": 21,
+    "operation": {
+      "type": "block",
+      "subtype": "cpdr"
+    },
+    "flags": {
+      "S": "1",
+      "Z": "1",
+      "H": "1",
+      "PV": "1",
+      "N": "1",
+      "C": "-"
+    },
+    "description": "Compare, Decrement and Repeat: CPD until BC=0 or Z=1"
+  }
+}

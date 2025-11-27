@@ -245,6 +245,25 @@
       "C": "-"
     }
   },
+  "0x1B": {
+    "opcode": "0x1B",
+    "mnemonic": "DEC DE",
+    "bytes": 1,
+    "cycles": 6,
+    "operation": {
+      "type": "arithmetic",
+      "subtype": "dec16",
+      "destination": "DE"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "-",
+      "PV": "-",
+      "N": "-",
+      "C": "-"
+    }
+  },
   "0x21": {
     "opcode": "0x21",
     "mnemonic": "LD HL,nn",
@@ -473,6 +492,24 @@
       "C": "-"
     }
   },
+  "0x37": {
+    "opcode": "0x37",
+    "mnemonic": "SCF",
+    "bytes": 1,
+    "cycles": 4,
+    "operation": {
+      "type": "special",
+      "subtype": "scf"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "0",
+      "PV": "-",
+      "N": "0",
+      "C": "1"
+    }
+  },
   "0x3A": {
     "opcode": "0x3A",
     "mnemonic": "LD A,(nn)",
@@ -528,6 +565,24 @@
       "PV": "-",
       "N": "-",
       "C": "-"
+    }
+  },
+  "0x3F": {
+    "opcode": "0x3F",
+    "mnemonic": "CCF",
+    "bytes": 1,
+    "cycles": 4,
+    "operation": {
+      "type": "special",
+      "subtype": "ccf"
+    },
+    "flags": {
+      "S": "-",
+      "Z": "-",
+      "H": "*",
+      "PV": "-",
+      "N": "0",
+      "C": "*"
     }
   },
   "0x40": {

@@ -3,20 +3,20 @@
 ;        ADD/SUB with (HL), AND/OR/XOR/CP with (HL), INC/DEC (HL)
 
 0000: 31 00 F0    ; LD SP,0xF000    - Initialize stack
-0003: 21 50 00    ; LD HL,0x0050    - Point HL to data area
+0003: 21 00 70    ; LD HL,0x7000    - Point HL to safe data area (NOT in code!)
 
 ; Test LD (HL),r and LD r,(HL)
 0006: 3E AA       ; LD A,0xAA       - Load test value
-0008: 77          ; LD (HL),A       - Store A at (HL) -> [0x0050] = 0xAA
-0009: 23          ; INC HL          - HL = 0x0051
+0008: 77          ; LD (HL),A       - Store A at (HL) -> [0x7000] = 0xAA
+0009: 23          ; INC HL          - HL = 0x7001
 000A: 06 BB       ; LD B,0xBB       - Load test value
-000C: 70          ; LD (HL),B       - Store B at (HL) -> [0x0051] = 0xBB
-000D: 23          ; INC HL          - HL = 0x0052
+000C: 70          ; LD (HL),B       - Store B at (HL) -> [0x7001] = 0xBB
+000D: 23          ; INC HL          - HL = 0x7002
 000E: 0E CC       ; LD C,0xCC       - Load test value
-0010: 71          ; LD (HL),C       - Store C at (HL) -> [0x0052] = 0xCC
+0010: 71          ; LD (HL),C       - Store C at (HL) -> [0x7002] = 0xCC
 
 ; Read back and verify
-0011: 21 50 00    ; LD HL,0x0050    - Reset HL
+0011: 21 00 70    ; LD HL,0x7000    - Reset HL
 0014: 7E          ; LD A,(HL)       - A = [0x0050] = 0xAA
 0015: FE AA       ; CP 0xAA         - Compare
 0017: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
@@ -27,28 +27,28 @@
 001F: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
 
 ; Test LD (BC),A and LD A,(BC)
-0022: 01 60 00    ; LD BC,0x0060    - Point BC to data area
+0022: 01 00 71    ; LD BC,0x7100    - Point BC to safe data area
 0025: 3E 55       ; LD A,0x55       - Load test value
-0027: 02          ; LD (BC),A       - Store A at (BC) -> [0x0060] = 0x55
+0027: 02          ; LD (BC),A       - Store A at (BC) -> [0x7100] = 0x55
 0028: 3E 00       ; LD A,0x00       - Clear A
-002A: 0A          ; LD A,(BC)       - A = [0x0060] = 0x55
+002A: 0A          ; LD A,(BC)       - A = [0x7100] = 0x55
 002B: FE 55       ; CP 0x55         - Compare
 002D: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
 
 ; Test LD (DE),A and LD A,(DE)
-0030: 11 70 00    ; LD DE,0x0070    - Point DE to data area
+0030: 11 00 72    ; LD DE,0x7200    - Point DE to safe data area
 0033: 3E 33       ; LD A,0x33       - Load test value
-0035: 12          ; LD (DE),A       - Store A at (DE) -> [0x0070] = 0x33
+0035: 12          ; LD (DE),A       - Store A at (DE) -> [0x7200] = 0x33
 0036: 3E 00       ; LD A,0x00       - Clear A
-0038: 1A          ; LD A,(DE)       - A = [0x0070] = 0x33
+0038: 1A          ; LD A,(DE)       - A = [0x7200] = 0x33
 0039: FE 33       ; CP 0x33         - Compare
 003B: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
 
 ; Test LD (nn),A and LD A,(nn)
 003E: 3E 77       ; LD A,0x77       - Load test value
-0040: 32 80 00    ; LD (0x0080),A   - Store A at 0x0080
+0040: 32 00 73    ; LD (0x7300),A   - Store A at 0x7300
 0043: 3E 00       ; LD A,0x00       - Clear A
-0045: 3A 80 00    ; LD A,(0x0080)   - A = [0x0080] = 0x77
+0045: 3A 00 73    ; LD A,(0x7300)   - A = [0x7300] = 0x77
 0048: FE 77       ; CP 0x77         - Compare
 004A: C2 A0 00    ; JP NZ,error     - Jump to error if not equal
 
